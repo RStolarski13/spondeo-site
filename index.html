@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Spondeo: nota fiscal e Pix pelo WhatsApp</title>
-<meta name="description" content="Emita nota, cobre e receba sem sair do WhatsApp. Para prestadores de serviço do Simples Nacional.">
+<meta name="description" content="Emita nota fiscal e mande o Pix sem sair do WhatsApp. Para prestadores de serviço do Simples Nacional.">
 <meta name="theme-color" content="#10283f">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="estilo.css">
@@ -21,6 +21,7 @@
     <nav aria-label="Seções">
       <a href="#como-funciona">Como funciona</a>
       <a href="#painel">Painel</a>
+      <a href="#planos">Planos</a>
       <a href="#seguranca">Segurança</a>
       <a href="#perguntas">Perguntas</a>
     </nav>
@@ -33,21 +34,26 @@
     <div class="largura abertura-grade">
       <div class="abertura-texto">
         <h1>Nota fiscal e Pix, direto no WhatsApp.</h1>
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
         <p class="lead">Emita nota, cobre e receba sem sair da conversa. Você manda o valor e o
           nome do cliente, confere o resumo e confirma. Pronto: a nota sai e a cobrança
           vai junto.</p>
+-->
+        <p class="lead">Emita nota e mande o Pix sem sair da conversa. Você manda o valor e o
+          nome do cliente, confere o resumo e confirma. Pronto: a nota sai e o Pix para o
+          seu cliente vem junto.</p>
         <div class="acoes">
           <a class="botao" href="#comecar">Quero usar o Spondeo</a>
           <a class="botao secundario" href="#como-funciona">Ver como funciona</a>
         </div>
         <ul class="garantias">
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nota fiscal no padrão nacional, aceita em todo o país</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nota fiscal no padrão nacional, obrigatório para o Simples</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>O Pix cai direto na sua conta, sem intermediário</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nada é emitido sem a sua confirmação</li>
         </ul>
       </div>
 
-      <figure class="cena" aria-label="Exemplo de conversa no WhatsApp com o Spondeo, que termina com a nota emitida e o Pix recebido">
+      <figure class="cena" aria-label="Exemplo de conversa no WhatsApp com o Spondeo, que termina com a nota emitida e o Pix para o cliente">
         <div class="folha-nota" data-ui aria-hidden="true">
           <div class="folha-topo"><span>Nota fiscal</span><b>Nº 128</b></div>
           <dl>
@@ -78,10 +84,16 @@
                   <span class="respostas"><span>Confirmar</span><span>Corrigir</span></span></li>
                 <li class="msg minha m3">Confirmar<time>09:42<i class="tiques"></i></time></li>
                 <li class="msg m4"><span class="anexo"><span class="pdf">PDF</span><span><b>Nota-fiscal-128.pdf</b><small>1 página · 84 kB</small></span></span>
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
                   Pronto, a nota 128 foi emitida. Quer que eu mande a cobrança por Pix?<time>09:42</time></li>
                 <li class="msg minha m5">Gerar cobrança Pix<time>09:42<i class="tiques"></i></time></li>
                 <li class="msg m6"><b class="recebido">Pix recebido: R$ 850,00</b>
                   A Clínica Bem Estar pagou a nota 128.<time>14:15</time></li>
+-->
+                  Pronto, a nota 128 foi emitida. Quer mandar o Pix de R$ 850,00?<time>09:42</time></li>
+                <li class="msg minha m5">Gerar Pix<time>09:42<i class="tiques"></i></time></li>
+                <li class="msg m6"><b class="recebido">Pix de R$ 850,00</b>
+                  QR Code e Copia e Cola na sua chave. É só encaminhar para a Clínica Bem Estar.<time>09:42</time></li>
               </ol>
             </div>
             <div class="digitar"><span>Mensagem</span><i class="microfone"></i></div>
@@ -95,7 +107,7 @@
     <h2>Três passos, dentro da conversa</h2>
     <figure class="video-como">
       <video src="como-funciona.mp4" poster="como-funciona.jpg" autoplay muted loop playsinline
-        preload="metadata" aria-label="Vídeo: do pedido no WhatsApp à nota emitida e ao Pix recebido"></video>
+        preload="metadata" aria-label="Vídeo: do pedido no WhatsApp à nota emitida e ao Pix na sua chave"></video>
     </figure>
     <ol class="passos">
       <li>
@@ -114,10 +126,14 @@
       <li>
         <div class="quadro" data-ui aria-hidden="true">
           <div class="cartao-pix"><img src="qr-exemplo.svg" alt="" width="104" height="104">
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
             <div><small>Pix com vencimento em 15/10</small><b>R$ 850,00</b><span>Copiar código Pix</span></div></div>
+-->
+            <div><small>Pix na sua chave</small><b>R$ 850,00</b><span>Copiar código Pix</span></div></div>
         </div>
         <h3>Confirme</h3>
-        <p>A nota é emitida, o PDF chega na conversa e a cobrança por Pix pode ir junto para o seu cliente.</p></li>
+        <p>A nota é emitida, o PDF chega na conversa e o Pix para o seu cliente vem junto. Quer
+          cobrar outro valor? É só dizer.</p></li>
     </ol>
   </section>
 
@@ -146,31 +162,48 @@
    <div class="largura dois">
     <div class="mini-painel" data-ui aria-label="Exemplo do painel com dados fictícios">
       <dl class="mini-indicadores">
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
         <div><dt>A receber</dt><dd data-contar="4600">R$ 4.600,00</dd></div>
         <div><dt>Recebido no mês</dt><dd>R$ 850,00</dd></div>
         <div class="atencao"><dt>Vencidas</dt><dd data-contar="4600">R$ 4.600,00</dd></div>
         <div><dt>Faturado no mês</dt><dd data-contar="4550">R$ 4.550,00</dd></div>
+-->
+        <div><dt>Faturado no mês</dt><dd data-contar="4550">R$ 4.550,00</dd></div>
+        <div><dt>Notas no mês</dt><dd>3</dd></div>
       </dl>
       <!-- Igual ao painel real (Claude, 19/10/2026): meses claros, o atual em verde com o valor. -->
       <div class="mini-grafico" aria-hidden="true">
         <i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i><i class="b6 atual"><b>R$ 4.550</b></i>
       </div>
       <div class="mini-meses" aria-hidden="true"><span>mai</span><span>jun</span><span>jul</span><span>ago</span><span>set</span><span>out</span></div>
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
       <div class="mini-dinheiro" aria-hidden="true"><p>Onde está o dinheiro</p>
         <span class="barra-dinheiro"><i class="recebido"></i><i class="vencido"></i></span>
         <span class="legenda"><span><i class="recebido"></i>Recebido 16%</span><span><i class="vencido"></i>Vencido 84%</span></span></div>
+-->
+
       <ul class="mini-lista">
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
         <li><span>Tech Sul Ltda</span><span class="lado">R$ 3.400,00 <span class="selo tom-erro">Vencida</span></span></li>
         <li><span>Escola Aprender</span><span class="lado">R$ 1.200,00 <span class="selo tom-erro">Vencida</span></span></li>
         <li><span>Clínica Bem Estar</span><span class="lado">R$ 850,00 <span class="selo tom-ok">Paga</span></span></li>
+-->
+        <li><span>Tech Sul Ltda</span><span class="lado">R$ 2.500,00 <span class="selo tom-ok">Autorizada</span></span></li>
+        <li><span>Escola Aprender</span><span class="lado">R$ 1.200,00 <span class="selo tom-ok">Autorizada</span></span></li>
+        <li><span>Clínica Bem Estar</span><span class="lado">R$ 850,00 <span class="selo tom-ok">Autorizada</span></span></li>
       </ul>
     </div>
     <div>
       <h2>Tudo organizado num painel</h2>
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
       <p>Quanto você tem a receber, o que já entrou no mês, o que está atrasado e o que foi
         faturado. As notas ficam guardadas com PDF e XML, e cada cobrança mostra o Pix para
         reenviar ao cliente.</p>
       <p>No fim do mês, o relatório sai em planilha ou PDF para o seu contador.</p>
+-->
+      <p>Quanto você faturou no mês e cada nota emitida, com PDF e XML guardados. Os seus
+        clientes e serviços ficam cadastrados para a próxima nota sair mais rápido.</p>
+      <p>No plano Completo, o relatório do mês sai em planilha ou PDF para o seu contador.</p>
     </div>
    </div>
   </section>
@@ -181,12 +214,31 @@
       <dl class="pontos">
         <div><dt>Seu certificado protegido</dt><dd>O certificado digital nunca passa pelo WhatsApp. Ele é
           enviado por uma página segura e fica guardado com proteção.</dd></div>
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
         <div><dt>O dinheiro é seu</dt><dd>A cobrança sai pelo seu próprio banco. O pagamento cai direto
           na sua conta, sem passar por ninguém.</dd></div>
+-->
+        <div><dt>O dinheiro é seu</dt><dd>O Pix usa a sua própria chave. O pagamento cai direto na
+          sua conta, sem passar por ninguém.</dd></div>
         <div><dt>Nenhuma nota em dobro</dt><dd>Se o sistema do governo ficar fora do ar, o Spondeo
           confere antes de tentar de novo. A mesma nota nunca sai duas vezes.</dd></div>
       </dl>
     </div>
+  </section>
+
+  <section class="secao largura revelar" id="planos">
+    <h2>Planos</h2>
+    <p>Notas sem limite e sem taxa por nota em todos os planos. Cancele quando quiser.</p>
+    <ul class="planos">
+      <li><h3>Essencial</h3><p class="preco"><b>R$ 49,99</b>/mês</p>
+        <ul><li>Até 5 clientes</li><li>Nota e Pix pelo WhatsApp</li><li>Painel com PDF e XML</li></ul></li>
+      <li><h3>Profissional</h3><p class="preco"><b>R$ 69,99</b>/mês</p>
+        <ul><li>Até 20 clientes</li><li>Nota e Pix pelo WhatsApp</li><li>Painel com PDF e XML</li></ul></li>
+      <li class="destaque"><h3>Completo</h3><p class="preco"><b>R$ 99,99</b>/mês</p>
+        <ul><li>Clientes sem limite</li><li>Nota e Pix pelo WhatsApp</li><li>Relatórios para o contador</li><li>Atendimento prioritário</li></ul></li>
+    </ul>
+    <p class="nota-planos">Emitimos só no padrão nacional da nota de serviço. Se a sua cidade ainda
+      usar o sistema próprio da prefeitura, não funciona; conferimos no cadastro.</p>
   </section>
 
   <section class="secao largura revelar" id="para-quem">
@@ -208,11 +260,25 @@
     <details><summary>O que eu preciso para começar?</summary>
       <p>Um certificado digital A1 da empresa e um número de WhatsApp. O cadastro é feito numa
         página segura, nunca pela conversa.</p></details>
+<!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
     <details><summary>Funciona com o meu banco?</summary>
       <p>Começamos com alguns bancos e vamos incluir outros. Na conversa de cadastro, dizemos
         se o seu já está disponível.</p></details>
     <details><summary>Quanto custa?</summary>
       <p>Os planos ainda estão sendo definidos. Quem entrar agora acompanha tudo de perto.</p></details>
+-->
+    <details><summary>Funciona na minha cidade?</summary>
+      <p>O Spondeo emite a nota no padrão nacional. A partir de 1º de novembro de 2026, as empresas do
+        Simples Nacional emitem nesse padrão em todo o país. Se a sua cidade ainda exigir o
+        sistema próprio da prefeitura, o Spondeo não consegue emitir por lá. No cadastro,
+        conferimos a sua cidade antes de você começar.</p></details>
+    <details><summary>Funciona com o meu banco?</summary>
+      <p>Sim, com qualquer banco. Você cadastra a sua chave Pix no painel e o Spondeo gera o
+        QR Code e o Pix Copia e Cola de cada nota com ela.</p></details>
+    <details><summary>O Spondeo avisa quando o cliente paga?</summary>
+      <p>Ainda não. O pagamento cai direto na sua conta e aparece no app do seu banco.</p></details>
+    <details><summary>Quanto custa?</summary>
+      <p>A partir de R$ 49,99 por mês, sem taxa por nota. Veja os <a href="#planos">planos</a>.</p></details>
     </div>
   </section>
 
