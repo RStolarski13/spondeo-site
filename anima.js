@@ -46,6 +46,24 @@
     responder();
   }
 
+  // Planos (Claude, 23/10/2026): a régua de clientes indica o plano que cabe.
+  const escolha = document.querySelector('.escolha');
+  if (escolha) {
+    const regua = escolha.querySelector('input');
+    const saida = escolha.querySelector('output');
+    const lista = document.querySelector('.planos');
+    const indicar = () => {
+      const n = Number(regua.value);
+      saida.textContent = n >= 40 ? '40+' : String(n);
+      const id = n <= 5 ? 'essencial' : n <= 20 ? 'profissional' : 'completo';
+      lista.querySelectorAll('.plano').forEach((p) => p.classList.toggle('indicado-agora', p.id === 'plano-' + id));
+    };
+    escolha.hidden = false;
+    lista.classList.add('escolha-ativa');
+    regua.addEventListener('input', indicar);
+    indicar();
+  }
+
   const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Com "reduzir movimento", o vídeo não toca sozinho: fica parado, com controles.
   const video = document.querySelector('.video-como video');

@@ -294,11 +294,41 @@ details p{margin:0;padding:0 24px 22px}
 .video-como{margin:36px 0 0;border-radius:18px;overflow:hidden;background:var(--tinta);aspect-ratio:16/9}
 .video-como video{display:block;width:100%;height:100%;object-fit:cover}
 
-/* Planos (Claude, 23/10/2026) */
-.planos{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.planos>li{background:var(--papel);border:1px solid var(--borda);border-radius:14px;padding:28px}
-.planos>li.destaque{border:2px solid var(--verde)}
-.planos ul{margin:16px 0 0;padding-left:20px;display:grid;gap:6px}
-.preco{margin-top:8px;color:var(--suave)}.preco b{font-size:1.8rem;color:var(--tinta)}
-.nota-planos{margin-top:24px;color:var(--suave);font-size:.95rem}
-@media (max-width:860px){.planos{grid-template-columns:1fr}}
+/* Planos (Claude, 23/10/2026): o do meio é o "Mais assinado"; a régua de clientes indica o plano. */
+.planos-intro{max-width:64ch}
+.escolha{margin-top:36px;max-width:560px;display:grid;gap:10px}
+.escolha[hidden]{display:none}
+.escolha label{font-weight:650;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.escolha output{font-size:1.6rem;font-weight:700;color:var(--verde-texto);font-variant-numeric:tabular-nums;min-width:2.5ch;text-align:right}
+.escolha input{width:100%;accent-color:var(--verde);height:28px}
+.escolha-marcas{display:flex;justify-content:space-between;font-size:.82rem;color:var(--suave)}
+.planos{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.plano{position:relative;background:var(--papel);border:1px solid var(--borda);border-radius:18px;padding:32px 28px 28px;
+  transition:transform 320ms var(--ease-out),box-shadow 320ms var(--ease-out),border-color 200ms ease}
+.plano h3{margin:0;font-size:1.25rem}
+.plano.destaque{background:var(--tinta);color:#fff;border-color:var(--tinta);transform:translateY(-12px);box-shadow:0 30px 60px -34px rgba(16,40,63,.6)}
+.selo-plano{position:absolute;top:-14px;left:28px;margin:0;padding:4px 12px;border-radius:999px;background:var(--verde-claro);color:var(--tinta);font-size:.85rem;font-weight:700}
+.preco{display:flex;align-items:baseline;gap:2px;margin:18px 0 22px;color:var(--suave)}
+.preco b{font-size:3rem;line-height:1;color:var(--tinta);letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.preco .moeda{font-size:1.1rem;font-weight:650;margin-right:4px;color:var(--tinta)}
+.preco .centavos{font-size:1.25rem;font-weight:700;color:var(--tinta)}
+.preco .mes{margin-left:8px;font-size:.95rem}
+.destaque .preco,.destaque .preco .mes{color:#b9c8d6}
+.destaque .preco b,.destaque .preco .moeda,.destaque .preco .centavos{color:#fff}
+.vantagens{list-style:none;padding:20px 0 0;margin:0;display:grid;gap:11px;border-top:1px solid var(--borda)}
+.destaque .vantagens{border-top-color:#2a4560}
+.vantagens li{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;line-height:1.4}
+.vantagens li:first-child{font-weight:700}
+.vantagens svg{width:20px;height:20px;fill:none;stroke:var(--verde);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+.destaque .vantagens svg{stroke:var(--verde-claro)}
+.vantagens .fora{color:#8a99a8}.destaque .vantagens .fora{color:#7d93a8}
+.vantagens .fora span[aria-hidden]{text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.indicado{display:none}
+/* Com JS: o plano que cabe nos clientes informados sobe e ganha o selo */
+.plano.indicado-agora{transform:translateY(-12px);border-color:var(--verde);box-shadow:0 0 0 2px var(--verde),0 30px 60px -34px rgba(16,40,63,.5)}
+.plano.indicado-agora .indicado{display:block;position:absolute;top:-14px;right:28px;margin:0;padding:4px 12px;border-radius:999px;background:var(--verde);color:#fff;font-size:.85rem;font-weight:700;animation:surgir 280ms var(--ease-out)}
+.escolha-ativa .plano.destaque:not(.indicado-agora){transform:none}
+.nota-planos{margin-top:32px;max-width:none;color:var(--suave);font-size:.95rem}
+@media (prefers-reduced-motion:reduce){.plano,.plano.indicado-agora .indicado{transition:none;animation:none}}
+@media (max-width:860px){.planos{grid-template-columns:1fr;gap:32px}.plano.destaque{transform:none}.escolha-ativa .plano.indicado-agora{transform:none}}
