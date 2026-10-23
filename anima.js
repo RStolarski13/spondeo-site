@@ -60,8 +60,17 @@
     };
     escolha.hidden = false;
     lista.classList.add('escolha-ativa');
-    regua.addEventListener('input', indicar);
+    // No celular (carrossel), o plano indicado vem para o centro.
+    const centralizar = (el, suave) => {
+      if (lista.scrollWidth <= lista.clientWidth) return;
+      lista.scrollTo({ left: el.offsetLeft - (lista.clientWidth - el.offsetWidth) / 2, behavior: suave ? 'smooth' : 'auto' });
+    };
+    regua.addEventListener('input', () => {
+      indicar();
+      centralizar(lista.querySelector('.indicado-agora'), !matchMedia('(prefers-reduced-motion: reduce)').matches);
+    });
     indicar();
+    centralizar(lista.querySelector('.destaque'), false);
   }
 
   const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;

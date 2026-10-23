@@ -331,4 +331,19 @@ details p{margin:0;padding:0 24px 22px}
 .escolha-ativa .plano.destaque:not(.indicado-agora){transform:none}
 .nota-planos{margin-top:32px;max-width:none;color:var(--suave);font-size:.95rem}
 @media (prefers-reduced-motion:reduce){.plano,.plano.indicado-agora .indicado{transition:none;animation:none}}
-@media (max-width:860px){.planos{grid-template-columns:1fr;gap:32px}.plano.destaque{transform:none}.escolha-ativa .plano.indicado-agora{transform:none}}
+/* Celular: carrossel lateral, um cartão por vez e um pedaço do próximo à vista (pedido do Rafael). */
+.deslize{display:none}
+@media (max-width:860px){
+  .planos{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;
+    margin-inline:-24px;padding:24px 24px 12px;scroll-padding-inline:24px;scrollbar-width:none}
+  .planos::-webkit-scrollbar{display:none}
+  .plano{flex:0 0 82%;scroll-snap-align:center}
+  .plano.destaque,.escolha-ativa .plano.indicado-agora,.escolha-ativa .plano.destaque:not(.indicado-agora){transform:none}
+  .deslize{display:block;margin:8px 0 0;color:var(--suave);font-size:.9rem;text-align:center}
+}
+@media (max-width:480px){
+  .planos{margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}
+  /* Celular: menos vazio entre as seções */
+  .secao{padding-block:72px 0}
+  .campo-nevoa,.campo-verde{margin-top:72px;padding-block:64px}
+}
