@@ -329,7 +329,14 @@ details p{margin:0;padding:0 24px 22px}
 .plano.indicado-agora{transform:translateY(-12px);border-color:var(--verde);box-shadow:0 0 0 2px var(--verde),0 30px 60px -34px rgba(16,40,63,.5)}
 .plano.indicado-agora .indicado{display:block;position:absolute;top:-14px;right:28px;margin:0;padding:4px 12px;border-radius:999px;background:var(--verde);color:#fff;font-size:.85rem;font-weight:700;animation:surgir 280ms var(--ease-out)}
 .escolha-ativa .plano.destaque:not(.indicado-agora){transform:none}
-.nota-planos{margin-top:32px;max-width:none;color:var(--suave);font-size:.95rem}
+.plano{display:flex;flex-direction:column}
+.plano .vantagens{flex:1;align-content:start}
+.plano .assinar{margin-top:28px;width:100%}
+.destaque .assinar{background:var(--verde-claro);color:var(--tinta)}
+@media (hover:hover){.destaque .assinar:hover{background:#6fcbbd}}
+.teste-gratis{margin:28px 0 0;max-width:none;font-weight:600}
+.teste-gratis a{color:var(--azul)}
+.nota-planos{margin-top:12px;max-width:none;color:var(--suave);font-size:.95rem}
 @media (prefers-reduced-motion:reduce){.plano,.plano.indicado-agora .indicado{transition:none;animation:none}}
 /* Celular: carrossel lateral, um cartão por vez e um pedaço do próximo à vista (pedido do Rafael). */
 .deslize{display:none}
