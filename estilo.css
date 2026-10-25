@@ -221,7 +221,7 @@ details p{margin:0;padding:0 24px 22px}
 .rodape{padding-block:72px 40px}
 .rodape-marca{display:block;width:min(100%,620px);height:auto}
 .rodape-linha{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px}
-.rodape nav{display:flex;gap:24px}
+.rodape nav{display:flex;gap:24px;flex-wrap:wrap}
 .rodape a{color:var(--tinta);font-weight:600}
 .rodape small{margin-left:auto;font-size:.95rem;color:var(--suave)}
 
