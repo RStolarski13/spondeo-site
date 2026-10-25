@@ -295,7 +295,7 @@ details p{margin:0;padding:0 24px 22px}
 .video-como video{display:block;width:100%;height:100%;object-fit:cover}
 
 /* Planos (Claude, 23/10/2026): o do meio é o "Mais assinado"; a régua de clientes indica o plano. */
-.planos-intro{max-width:64ch}
+.planos-intro{max-width:none;text-wrap:pretty}
 .requisito-a1{margin-top:24px;padding:20px 24px;border-left:4px solid var(--verde);background:#eef3f7;border-radius:0 12px 12px 0}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
 .requisito-a1 p{margin:0;max-width:80ch}
