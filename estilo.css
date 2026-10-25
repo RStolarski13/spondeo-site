@@ -296,6 +296,15 @@ details p{margin:0;padding:0 24px 22px}
 
 /* Planos (Claude, 23/10/2026): o do meio é o "Mais assinado"; a régua de clientes indica o plano. */
 .planos-intro{max-width:none;text-wrap:pretty}
+.chamada-contador{margin-top:28px;max-width:none;padding-block:20px;border-block:1px solid var(--borda)}
+.chamada-contador a{color:var(--azul);font-weight:650}
+.abertura-contabilidade{padding-block:64px}
+.abertura-contabilidade h1{max-width:20ch}
+.acoes-contato{display:flex;flex-wrap:wrap;gap:12px}
+.contabilidades .preco{flex-wrap:wrap}
+.contabilidades .preco .consulta{font-size:2rem}
+.contabilidades .resumo-carteira{padding-top:20px;border-top:1px solid var(--borda)}
+@media(max-width:860px){.contabilidades .planos{display:grid;grid-template-columns:1fr;overflow:visible;margin-inline:0;padding:12px 0 0}.contabilidades .plano.destaque{transform:none}}
 .requisito-a1{margin-top:24px;padding:20px 24px;border-left:4px solid var(--verde);background:#eef3f7;border-radius:0 12px 12px 0}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
 .requisito-a1 p{margin:0;max-width:80ch}
