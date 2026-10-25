@@ -296,6 +296,10 @@ details p{margin:0;padding:0 24px 22px}
 
 /* Planos (Claude, 23/10/2026): o do meio é o "Mais assinado"; a régua de clientes indica o plano. */
 .planos-intro{max-width:64ch}
+.requisito-a1{margin-top:24px;padding:20px 24px;border-left:4px solid var(--verde);background:#eef3f7;border-radius:0 12px 12px 0}
+.requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
+.requisito-a1 p{margin:0;max-width:80ch}
+.requisito-a1 a{color:var(--azul);text-decoration:underline}
 .escolha{margin-top:36px;max-width:560px;display:grid;gap:10px}
 .escolha[hidden]{display:none}
 .escolha label{font-weight:650;display:flex;justify-content:space-between;gap:16px;align-items:baseline}

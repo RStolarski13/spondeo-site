@@ -47,6 +47,7 @@
           <a class="botao secundario" href="#como-funciona">Ver como funciona</a>
         </div>
         <ul class="garantias">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Para usar o Spondeo, é necessário certificado digital A1 da empresa, adquirido à parte</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nota fiscal no padrão nacional, obrigatório para o Simples</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>O Pix cai direto na sua conta, sem intermediário</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nada é emitido sem a sua confirmação</li>
@@ -229,8 +230,13 @@
 
   <section class="secao largura revelar" id="planos">
     <h2>Planos</h2>
-    <p class="planos-intro">Todos com notas sem limite e sem taxa por nota. O que muda é quantos clientes você atende e o que o painel mostra.
-      Comece com 10 notas de teste grátis, sem valor fiscal, e cancele quando quiser.</p>
+    <p class="planos-intro">Notas ilimitadas, sem taxa por nota. Escolha pelo número de clientes e pelos recursos do painel.</p>
+    <aside class="requisito-a1" aria-labelledby="titulo-a1">
+      <h3 id="titulo-a1">Antes de assinar: você precisa de um certificado A1</h3>
+      <p>É o arquivo que identifica sua empresa e assina as notas no Spondeo.
+        Deve estar válido e é adquirido à parte, com uma certificadora.
+        Ainda não tem? Consulte seu contador antes de assinar. <a href="#duvida-a1">Entenda o requisito</a>.</p>
+    </aside>
     <div class="escolha" hidden>
       <label for="clientes">Quantos clientes você atende por mês? <output id="clientes-valor" for="clientes">12</output></label>
       <input id="clientes" type="range" min="1" max="40" value="12" step="1">
@@ -240,17 +246,35 @@
       <li class="plano" id="plano-essencial"><p class="indicado" aria-hidden="true">Indicado</p>
         <h3>Essencial</h3>
         <p class="preco"><span class="moeda">R$</span><b>49</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-        <ul class="vantagens"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Até 5 clientes</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Notas fiscais sem limite e sem taxa por nota</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nota e Pix pelo WhatsApp, com a sua confirmação</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Pix na sua chave, de qualquer banco</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>PDF e XML de cada nota na conversa</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cancelar e corrigir notas pela conversa</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Certificado digital guardado com proteção</li><li class="fora"><span aria-hidden="true">–</span>Painel com todas as notas, PDF e XML<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Clientes e serviços pelo painel<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Planilha do mês para o contador<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Visão geral com o faturamento e gráficos do mês<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Relatório em PDF e todas as notas num arquivo só<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Atendimento prioritário<span class="sr"> (não incluído)</span></li></ul>
+        <ul class="vantagens">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Até 5 clientes</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Notas e Pix pelo WhatsApp</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>PDF e XML na conversa</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cancelar e corrigir notas</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Certificado protegido</li>
+        </ul>
         <a class="botao assinar" href="https://app.spondeo.com.br/assinar/essencial" data-link="assinar-essencial">Assinar o Essencial</a></li>
       <li class="plano destaque" id="plano-profissional"><p class="selo-plano">Mais assinado</p><p class="indicado" aria-hidden="true">Indicado</p>
         <h3>Profissional</h3>
         <p class="preco"><span class="moeda">R$</span><b>69</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-        <ul class="vantagens"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Até 20 clientes</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Notas fiscais sem limite e sem taxa por nota</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nota e Pix pelo WhatsApp, com a sua confirmação</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Pix na sua chave, de qualquer banco</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>PDF e XML de cada nota na conversa</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cancelar e corrigir notas pela conversa</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Certificado digital guardado com proteção</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Painel com todas as notas, PDF e XML</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Clientes e serviços pelo painel</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Planilha do mês para o contador</li><li class="fora"><span aria-hidden="true">–</span>Visão geral com o faturamento e gráficos do mês<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Relatório em PDF e todas as notas num arquivo só<span class="sr"> (não incluído)</span></li><li class="fora"><span aria-hidden="true">–</span>Atendimento prioritário<span class="sr"> (não incluído)</span></li></ul>
+        <ul class="vantagens">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Até 20 clientes</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Tudo do Essencial</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Painel de notas</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Gestão de clientes e serviços</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Planilha para o contador</li>
+        </ul>
         <a class="botao assinar" href="https://app.spondeo.com.br/assinar/profissional" data-link="assinar-profissional">Assinar o Profissional</a></li>
       <li class="plano" id="plano-completo"><p class="indicado" aria-hidden="true">Indicado</p>
         <h3>Completo</h3>
         <p class="preco"><span class="moeda">R$</span><b>99</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-        <ul class="vantagens"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Clientes sem limite</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Notas fiscais sem limite e sem taxa por nota</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nota e Pix pelo WhatsApp, com a sua confirmação</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Pix na sua chave, de qualquer banco</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>PDF e XML de cada nota na conversa</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cancelar e corrigir notas pela conversa</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Certificado digital guardado com proteção</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Painel com todas as notas, PDF e XML</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Clientes e serviços pelo painel</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Planilha do mês para o contador</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Visão geral com o faturamento e gráficos do mês</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Relatório em PDF e todas as notas num arquivo só</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Atendimento prioritário</li></ul>
+        <ul class="vantagens">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Clientes sem limite</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Tudo do Profissional</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Faturamento e gráficos</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Relatórios em PDF e notas em lote</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Atendimento prioritário</li>
+        </ul>
         <a class="botao assinar" href="https://app.spondeo.com.br/assinar/completo" data-link="assinar-completo">Assinar o Completo</a></li>
     </ul>
     <p class="deslize" aria-hidden="true">Deslize para ver os outros planos</p>
@@ -274,9 +298,18 @@
     <details><summary>Preciso continuar com o meu contador?</summary>
       <p>Sim. O Spondeo emite e cobra; o contador continua cuidando da contabilidade. Os códigos
         de cada serviço são definidos com ele uma vez, no cadastro.</p></details>
-    <details><summary>O que eu preciso para começar?</summary>
-      <p>Um certificado digital A1 da empresa e um número de WhatsApp. O cadastro é feito numa
-        página segura, nunca pela conversa.</p></details>
+    <details id="duvida-a1"><summary>O que é o certificado A1? Preciso ter um?</summary>
+      <p>Para usar o Spondeo, sim. É a identidade digital da empresa em um arquivo
+        (.pfx ou .p12), usado para assinar as notas. Você precisa do A1 válido da
+        empresa e da senha do arquivo. O Spondeo ainda não aceita A3 em cartão ou token.</p>
+      <p>O certificado não está incluído na assinatura. Se ainda não tem, consulte seu
+        contador ou uma certificadora credenciada à ICP-Brasil antes de contratar.
+        O envio do arquivo é feito somente no cadastro seguro, nunca pelo WhatsApp.</p></details>
+    <details><summary>Preciso comprar A1 mesmo se emitir fora do Spondeo?</summary>
+      <p>Não necessariamente. O A1 é requisito do Spondeo. O portal oficial da NFS-e
+        também prevê acesso com usuário e senha, sem certificado; para MEI, há acesso
+        por conta gov.br prata ou ouro. A opção disponível depende do seu cadastro.
+        Confira o <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual/guia-emissorpubliconacionalweb_snnfse-ern-v12.pdf/@@download/file">guia oficial do Emissor Nacional</a>.</p></details>
 <!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
     <details><summary>Funciona com o meu banco?</summary>
       <p>Começamos com alguns bancos e vamos incluir outros. Na conversa de cadastro, dizemos
