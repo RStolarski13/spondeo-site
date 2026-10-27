@@ -304,7 +304,6 @@ details p{margin:0;padding:0 24px 22px}
 .contabilidades .preco{flex-wrap:wrap}
 .contabilidades .preco .consulta{font-size:2rem}
 .contabilidades .resumo-carteira{padding-top:20px;border-top:1px solid var(--borda)}
-@media(max-width:860px){.contabilidades .planos{display:grid;grid-template-columns:1fr;overflow:visible;margin-inline:0;padding:12px 0 0}.contabilidades .plano.destaque{transform:none}}
 .requisito-a1{margin-top:24px;padding:20px 24px;border-left:4px solid var(--verde);background:#eef3f7;border-radius:0 12px 12px 0}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
 .requisito-a1 p{margin:0;max-width:80ch}
@@ -366,4 +365,32 @@ details p{margin:0;padding:0 24px 22px}
   /* Celular: menos vazio entre as seções */
   .secao{padding-block:72px 0}
   .campo-nevoa,.campo-verde{margin-top:72px;padding-block:64px}
+}
+
+/* Guias e contabilidades usam a mesma abertura, cartões, botões e tokens da landing. */
+.hero-editorial{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:64px;align-items:center;padding-block:72px 88px}
+.hero-editorial h1{max-width:18ch}
+.resumo-hero{padding:32px;border-radius:var(--raio);background:var(--azul-escuro)}
+.resumo-hero h2{font-size:1.65rem;line-height:1.2;letter-spacing:-.02em}
+.resumo-hero p{color:#e6edf3}
+.aviso-teste{margin-top:24px;padding-top:20px;border-top:1px solid #42627c}
+.nota-atualizacao{font-size:.9rem}
+.grade-editorial{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
+.etapas-editoriais{list-style:none;counter-reset:passo;padding:0;margin:36px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.etapas-editoriais li{counter-increment:passo;padding-top:20px;border-top:2px solid var(--verde)}
+.etapas-editoriais li::before{content:counter(passo);display:block;margin-bottom:16px;color:var(--verde-texto);font-size:1.6rem;font-weight:650}
+.lista-editorial,.beneficios-carteira{padding-left:20px}
+.lista-editorial li,.beneficios-carteira li{margin-block:10px}
+.beneficios-carteira{flex:1;font-size:.95rem}
+.contabilidades .destaque .nota-planos{color:#d3dce5}
+.artigo-editorial{max-width:820px}
+.artigo-editorial h2:not(:first-child){margin-top:48px}
+.artigo-editorial p{max-width:70ch}
+.rodape nav{flex-wrap:wrap}
+@media(max-width:860px){
+  .hero-editorial,.grade-editorial{grid-template-columns:1fr;gap:32px}
+  .hero-editorial{padding-block:48px 56px}
+  .hero-editorial h1{max-width:22ch}
+  .resumo-hero{padding:24px}
+  .etapas-editoriais{grid-template-columns:1fr;gap:20px}
 }
