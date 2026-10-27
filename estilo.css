@@ -410,3 +410,5 @@ details p{margin:0;padding:0 24px 22px}
 
 .entrada-editorial{animation:surgir .8s var(--ease-out) .1s both}
 @media(prefers-reduced-motion:reduce){.entrada-editorial{animation:none!important}}
+
+.video-como figcaption{margin-top:12px;color:var(--suave);font-size:.9rem;line-height:1.5}
