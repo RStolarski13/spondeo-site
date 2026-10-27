@@ -3,33 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Spondeo: nota fiscal e Pix pelo WhatsApp</title>
-<meta name="description" content="Emita nota fiscal e mande o Pix sem sair do WhatsApp. Para prestadores de serviço do Simples Nacional.">
+<title>Spondeo: nota fiscal de serviço pelo WhatsApp</title>
+<meta name="description" content="Nota fiscal de serviço pelo WhatsApp para prestadores do Simples Nacional. Confira e confirme antes de emitir. A1 adquirido à parte. Conheça os planos.">
 <meta name="theme-color" content="#10283f">
 <link rel="canonical" href="https://spondeo.com.br/">
 <meta property="og:title" content="Spondeo: nota fiscal de serviço pelo WhatsApp">
 <meta property="og:description" content="Peça, confira e confirme sua nota de serviço pelo WhatsApp. Conheça os requisitos e teste com notas sem valor fiscal.">
 <meta property="og:url" content="https://spondeo.com.br/">
 <meta property="og:type" content="website">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="estilo.css?v=20261027">
-<!-- Landing estática para o Cloudflare Pages (sem build e sem JavaScript). Marca em docs/marca.md.
-     Ajustes pendentes antes de publicar: ver marketing/README.md. Os trechos com data-ui são
-     pedaços da interface real (conversa, nota, painel) e seguem o visual do produto. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/estilo.css?v=20261027b">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Spondeo", "url": "https://spondeo.com.br/"}</script>
+<!-- Site estático no GitHub Pages. Identidade compartilhada com o produto. -->
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="topo">
   <div class="largura topo-linha">
-    <a class="marca" href="#"><img src="spondeo-logo-negativo.svg" alt="Spondeo" width="155" height="30"></a>
+    <a class="marca" href="#"><img src="/spondeo-logo-negativo.svg" alt="Spondeo" width="155" height="30"></a>
     <nav aria-label="Seções">
       <a href="#como-funciona">Como funciona</a>
       <a href="#painel">Painel</a>
       <a href="#planos">Planos</a>
       <a href="#seguranca">Segurança</a>
       <a href="#perguntas">Perguntas</a>
-      <a href="contabilidades.html">Contabilidades</a>
+      <a href="/contabilidades/">Contabilidades</a>
     </nav>
     <a class="entrar" href="https://app.spondeo.com.br/entrar" data-link="painel">Entrar</a>
   </div>
@@ -79,7 +78,7 @@
             </div>
             <div class="chat-topo">
               <svg class="voltar" viewBox="0 0 12 20"><path d="M10 2L2 10l8 8"/></svg>
-              <span class="avatar"><img src="spondeo-simbolo-claro.svg" alt="" width="24" height="24"></span>
+              <span class="avatar"><img src="/spondeo-simbolo-claro.svg" alt="" width="24" height="24"></span>
               <div class="chat-nome"><b>Spondeo</b><span class="online">online</span><span class="digitando">digitando…</span></div>
             </div>
             <div class="conversa">
@@ -113,7 +112,7 @@
   <section class="secao largura revelar" id="como-funciona">
     <h2>Três passos, dentro da conversa</h2>
     <figure class="video-como">
-      <video src="como-funciona.mp4" poster="como-funciona.jpg" autoplay muted loop playsinline
+      <video src="/como-funciona.mp4" poster="/como-funciona.jpg" autoplay muted loop playsinline
         preload="metadata" aria-label="Vídeo: do pedido no WhatsApp à nota emitida e ao Pix na sua chave"></video>
     </figure>
     <ol class="passos">
@@ -132,7 +131,7 @@
         <p>Valor, cliente e serviço aparecem antes de qualquer emissão. Errou algo? É só dizer.</p></li>
       <li>
         <div class="quadro" data-ui aria-hidden="true">
-          <div class="cartao-pix"><img src="qr-exemplo.svg" alt="" width="104" height="104">
+          <div class="cartao-pix"><img src="/qr-exemplo.svg" alt="" width="104" height="104">
 <!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
             <div><small>Pix com vencimento em 15/10</small><b>R$ 850,00</b><span>Copiar código Pix</span></div></div>
 -->
@@ -285,7 +284,7 @@
     </ul>
     <p class="deslize" aria-hidden="true">Deslize para ver os outros planos</p>
     <p class="chamada-contador"><strong>É contador?</strong> Conheça as condições especiais para o seu escritório.
-      <a href="contabilidades.html">Ver planos para contabilidades</a>.</p>
+      <a href="/contabilidades/">Ver planos para contabilidades</a>.</p>
     <p class="teste-gratis">Prefere testar antes? <a href="https://app.spondeo.com.br/cadastro" data-link="cadastro">Comece com 10 notas grátis</a>, sem valor fiscal.</p>
     <p class="nota-planos">Emitimos só no padrão nacional da nota de serviço. Se a sua cidade ainda usar o sistema próprio da prefeitura, não funciona; conferimos no cadastro.</p>
   </section>
@@ -344,23 +343,23 @@
       <a class="botao claro" href="https://app.spondeo.com.br/cadastro" data-link="cadastro">Começar o teste grátis</a>
     </div>
   </section>
-  <section class="secao largura">
+  <section class="secao largura revelar">
     <h2>Entenda antes de começar.</h2>
     <div class="grade-editorial">
-      <div><h3>Nota de serviço pelo WhatsApp</h3><p>Veja os passos, os requisitos do cadastro e o que é possível experimentar com notas sem valor fiscal.</p><a href="nota-fiscal-whatsapp.html">Como funciona a emissão pelo WhatsApp</a></div>
-      <div><h3>NFS-e nacional e Simples</h3><p>Conheça a mudança de novembro de 2026 e o que preparar com o seu contador.</p><a href="nfse-nacional-simples.html">Entender a NFS-e nacional</a></div>
+      <div><h3>Nota de serviço pelo WhatsApp</h3><p>Veja os passos, os requisitos do cadastro e o que é possível experimentar com notas sem valor fiscal.</p><a href="/nota-fiscal-whatsapp/">Como funciona a emissão pelo WhatsApp</a></div>
+      <div><h3>NFS-e nacional e Simples</h3><p>Conheça a mudança de novembro de 2026 e o que preparar com o seu contador.</p><a href="/nfse-nacional-simples/">Entender a NFS-e nacional</a></div>
     </div>
   </section>
 </main>
 
 <footer class="rodape">
   <div class="largura">
-    <img class="rodape-marca" src="spondeo-logo.svg" alt="Spondeo" width="620" height="120">
+    <img class="rodape-marca" src="/spondeo-logo.svg" alt="Spondeo" width="620" height="120">
     <div class="rodape-linha">
       <nav aria-label="Links legais">
-        <a href="nota-fiscal-whatsapp.html">Nota pelo WhatsApp</a>
-        <a href="nfse-nacional-simples.html">NFS-e nacional</a>
-        <a href="contabilidades.html">Contabilidades</a>
+        <a href="/nota-fiscal-whatsapp/">Nota pelo WhatsApp</a>
+        <a href="/nfse-nacional-simples/">NFS-e nacional</a>
+        <a href="/contabilidades/">Contabilidades</a>
         <a href="https://www.instagram.com/spondeo.app/">Instagram</a>
         <a href="https://www.facebook.com/people/Spondeo/61595872323313/">Facebook</a>
         <a href="https://app.spondeo.com.br/cancelamento">Cancelamento</a>
@@ -371,6 +370,7 @@
     </div>
   </div>
 </footer>
-<script src="anima.js" defer></script>
+<script src="/anima.js" defer></script>
+<script src="/carregamento.js?v=1" defer></script>
 </body>
 </html>
