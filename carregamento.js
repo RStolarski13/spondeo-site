@@ -41,7 +41,7 @@
     const botao = evento.submitter;
     const target = botao?.getAttribute('formtarget') || form.target;
     const destino = new URL(botao?.getAttribute('formaction') || form.action, location.href);
-    if (form.method === 'dialog' || (target && target !== '_self') ||
+    if (botao?.hasAttribute('data-download') || form.method === 'dialog' || (target && target !== '_self') ||
         destino.origin !== location.origin) return;
     queueMicrotask(() => { if (!evento.defaultPrevented) aguardar(); });
   });
