@@ -114,12 +114,6 @@ p{margin:12px 0;max-width:62ch}
 .mini-indicadores dt{font-size:.82rem;color:var(--suave)} /* taste-skill-ignore */
 .mini-indicadores dd{margin:2px 0 0;font-size:1.2rem;font-weight:650;font-variant-numeric:tabular-nums} /* taste-skill-ignore */
 .mini-indicadores .atencao dd{color:var(--erro-texto)} /* taste-skill-ignore */
-.mini-grafico{height:120px;padding:24px 24px 0;display:flex;align-items:flex-end;gap:7%;border-bottom:1px solid var(--borda-forte,#c9d3dc)} /* taste-skill-ignore */
-.mini-grafico i{flex:1;background:var(--barra);border-radius:3px 3px 0 0} /* taste-skill-ignore */
-.b1{height:50%}.b2{height:90%}.b3{height:40%}.b4{height:76%}.b5{height:63%}.b6{height:76%}
-.mini-grafico i{background:#a8dcd3;position:relative}.mini-grafico i.atual{background:var(--verde)} /* taste-skill-ignore */
-.mini-grafico i b{position:absolute;left:50%;bottom:100%;transform:translate(-50%,-4px);font-size:.72rem;font-weight:650;white-space:nowrap;color:var(--tinta)} /* taste-skill-ignore */
-.mini-meses{display:flex;gap:7%;padding:6px 24px 10px;border-bottom:1px solid var(--borda);font-size:.72rem;color:var(--suave)}.mini-meses span{flex:1;text-align:center} /* taste-skill-ignore */
 .mini-dinheiro{padding:14px 20px;border-bottom:1px solid var(--borda)}.mini-dinheiro p{margin:0 0 8px;font-size:.88rem;font-weight:650} /* taste-skill-ignore */
 .barra-dinheiro{display:flex;gap:2px;height:10px}.barra-dinheiro i{border-radius:3px} /* taste-skill-ignore */
 .barra-dinheiro .recebido{width:16%;background:var(--verde)}.barra-dinheiro .vencido{flex:1;background:var(--erro-texto)} /* taste-skill-ignore */
@@ -215,11 +209,6 @@ details p{margin:0;padding:0 24px 22px}
 .js .revelar.visivel :is(.passos>li:nth-child(3),.pontos>div:nth-child(3),details:nth-of-type(3)){transition-delay:.3s}
 .js .revelar.visivel details:nth-of-type(4){transition-delay:.38s}
 .js .revelar.visivel .etiquetas li:nth-child(n){transition-delay:calc(.1s + var(--n,0) * 40ms)}
-.js .revelar .mini-grafico i{transform:scaleY(0);transform-origin:bottom;transition:transform .9s var(--ease-out)}
-.js .revelar.visivel .mini-grafico i{transform:none}
-.js .revelar.visivel .mini-grafico .b1{transition-delay:.35s}.js .revelar.visivel .mini-grafico .b2{transition-delay:.42s}
-.js .revelar.visivel .mini-grafico .b3{transition-delay:.49s}.js .revelar.visivel .mini-grafico .b4{transition-delay:.56s}
-.js .revelar.visivel .mini-grafico .b5{transition-delay:.63s}.js .revelar.visivel .mini-grafico .b6{transition-delay:.7s}
 @media (hover:hover) and (pointer:fine){
   .quadro:hover{transform:translateY(-6px)}
   .etiquetas li{transition:background-color 150ms ease,color 150ms ease}
@@ -246,7 +235,7 @@ details p{margin:0;padding:0 24px 22px}
 .contabilidades .preco{flex-wrap:wrap}
 .contabilidades .preco .consulta{font-size:2rem}
 .contabilidades .resumo-carteira{padding-top:20px;border-top:1px solid var(--borda)}
-.requisito-a1{margin-top:24px;padding:20px 24px;border-left:4px solid var(--verde);background:#eef3f7;border-radius:0 12px 12px 0}
+.requisito-a1{margin-top:24px;padding:20px 24px;border:1px solid var(--borda);background:#eef3f7;border-radius:12px}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
 .requisito-a1 p{margin:0;max-width:80ch}
 .requisito-a1 a{color:var(--azul);text-decoration:underline}
@@ -474,3 +463,18 @@ html:not(.sem-abertura) .abertura-texto>:nth-child(3){animation-delay:2.41s}
 html:not(.sem-abertura) .abertura-texto>:nth-child(4){animation-delay:2.49s}
 .sem-abertura .abre-logo{display:none}
 @media(prefers-reduced-motion:reduce){.abre-logo{display:none}}
+
+/* Mini gráfico do painel em linha (Claude, 29/10/2026), igual ao painel real. */
+.mini-grafico{display:block;width:100%;height:auto;padding:16px 20px 4px;border-bottom:1px solid var(--borda);overflow:visible}
+.mini-grafico .grade{stroke:var(--borda);stroke-dasharray:2 4;vector-effect:non-scaling-stroke}
+.mini-grafico .curva{fill:none;stroke:var(--verde);stroke-width:1.6;stroke-linecap:round}
+.mini-grafico .ponto{fill:var(--papel);stroke:var(--verde);stroke-width:1.6}
+.mini-grafico .ponto.atual{fill:var(--verde)}
+.mini-grafico .halo{fill:var(--verde);fill-opacity:.16}
+.mini-grafico .valor{font-size:11px;font-weight:650;fill:var(--tinta);font-family:inherit}
+.mini-grafico .mes{font-size:9px;fill:var(--suave);font-family:inherit}
+.js .revelar .mini-grafico .curva{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s var(--ease-out) .35s}
+.js .revelar.visivel .mini-grafico .curva{stroke-dashoffset:0}
+.js .revelar .mini-grafico :is(.area,.ponto,.halo,.valor){opacity:0;transition:opacity .5s ease 1.2s}
+.js .revelar.visivel .mini-grafico :is(.area,.ponto,.halo,.valor){opacity:1}
+@media(max-width:600px){.mini-grafico .curva{stroke-width:2.2}.mini-grafico .mes{font-size:11px}.mini-grafico .valor{font-size:13px}}

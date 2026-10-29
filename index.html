@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Demonstração ilustrativa de nota de serviço pelo WhatsApp no Spondeo">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/estilo.css?v=20261029">
+<link rel="stylesheet" href="/estilo.css?v=20261029c">
 <script src="/abertura.js?v=1"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://spondeo.com.br/#site", "name": "Spondeo", "url": "https://spondeo.com.br/", "publisher": {"@id": "https://spondeo.com.br/#organizacao"}}, {"@type": "Organization", "@id": "https://spondeo.com.br/#organizacao", "name": "Spondeo", "url": "https://spondeo.com.br/", "logo": "https://spondeo.com.br/spondeo-logo.svg", "sameAs": ["https://www.instagram.com/spondeo.app/", "https://www.facebook.com/people/Spondeo/61595872323313/"]}]}</script>
 <!-- Site estático no GitHub Pages. Identidade compartilhada com o produto. -->
@@ -157,11 +157,8 @@
         <div><dt>Faturado no mês</dt><dd data-contar="4550">R$ 4.550,00</dd></div>
         <div><dt>Notas no mês</dt><dd>3</dd></div>
       </dl>
-      <!-- Igual ao painel real (Claude, 19/10/2026): meses claros, o atual em verde com o valor. -->
-      <div class="mini-grafico" aria-hidden="true">
-        <i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i><i class="b5"></i><i class="b6 atual"><b>R$ 4.550</b></i>
-      </div>
-      <div class="mini-meses" aria-hidden="true"><span>mai</span><span>jun</span><span>jul</span><span>ago</span><span>set</span><span>out</span></div>
+      <!-- Igual ao painel real (Claude, 29/10/2026): linha com área, o mês atual em destaque. -->
+      <svg class="mini-grafico" viewBox="0 0 300 128" aria-hidden="true"><defs><linearGradient id="mini-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f766e" stop-opacity=".22"/><stop offset="1" stop-color="#0f766e" stop-opacity="0"/></linearGradient></defs><line class="grade" x1="0" x2="300" y1="26" y2="26"/><line class="grade" x1="0" x2="300" y1="63" y2="63"/><line class="grade" x1="0" x2="300" y1="100" y2="100"/><path class="area" d="M14.0,58.6C41.2,58.6 41.2,46.7 68.4,46.7C95.6,46.7 95.6,64.5 122.8,64.5C150.0,64.5 150.0,42.3 177.2,42.3C204.4,42.3 204.4,54.1 231.6,54.1C258.8,54.1 258.8,32.7 286.0,32.7L286.0,100L14.0,100Z" fill="url(#mini-area)"/><path class="curva" d="M14.0,58.6C41.2,58.6 41.2,46.7 68.4,46.7C95.6,46.7 95.6,64.5 122.8,64.5C150.0,64.5 150.0,42.3 177.2,42.3C204.4,42.3 204.4,54.1 231.6,54.1C258.8,54.1 258.8,32.7 286.0,32.7" pathLength="1"/><circle class="ponto" cx="14.0" cy="58.6" r="3"/><circle class="ponto" cx="68.4" cy="46.7" r="3"/><circle class="ponto" cx="122.8" cy="64.5" r="3"/><circle class="ponto" cx="177.2" cy="42.3" r="3"/><circle class="ponto" cx="231.6" cy="54.1" r="3"/><circle class="halo" cx="286" cy="32.7" r="8"/><circle class="ponto atual" cx="286" cy="32.7" r="3.6"/><text class="valor" x="286" y="20" text-anchor="end">R$ 4.550</text><text class="mes" x="14.0" y="120" text-anchor="middle">mai</text><text class="mes" x="68.4" y="120" text-anchor="middle">jun</text><text class="mes" x="122.8" y="120" text-anchor="middle">jul</text><text class="mes" x="177.2" y="120" text-anchor="middle">ago</text><text class="mes" x="231.6" y="120" text-anchor="middle">set</text><text class="mes" x="286.0" y="120" text-anchor="middle">out</text></svg>
 <!-- Guardado para quando houver baixa automática (gateway), 23/10/2026:
       <div class="mini-dinheiro" aria-hidden="true"><p>Onde está o dinheiro</p>
         <span class="barra-dinheiro"><i class="recebido"></i><i class="vencido"></i></span>
