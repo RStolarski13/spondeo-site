@@ -431,10 +431,8 @@ h2{font-weight:700}
 
 /* Abertura (Claude, 29/10/2026): vídeo do celular com a conversa. No computador fica ao lado do
    texto; no celular, como nos apps de banco, logo abaixo dos botões e antes das garantias. */
-.video-palco{position:relative;margin:0;justify-self:center;width:100%;max-width:470px}
-.video-palco::before{content:"";position:absolute;z-index:0;inset:4% -4%;pointer-events:none;
-  background:radial-gradient(closest-side at 40% 40%,rgba(79,184,168,.45),transparent),radial-gradient(closest-side at 64% 70%,rgba(15,118,110,.5),transparent);filter:blur(40px)}
-.video-palco video{position:relative;display:block;width:100%;height:auto;aspect-ratio:920/1080;background:var(--tinta);
+.video-palco{position:relative;margin:0;justify-self:center;width:100%;max-width:560px}
+.video-palco video{position:relative;display:block;width:100%;height:auto;aspect-ratio:960/1080;background:var(--tinta);
   animation:surgir 1s var(--ease-out) .1s both;
   -webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 94%,transparent);
   -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 94%,transparent);mask-composite:intersect}
