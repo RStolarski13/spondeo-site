@@ -77,6 +77,9 @@
   // Com "reduzir movimento", o vídeo não toca sozinho: fica parado, com controles.
   const video = document.querySelector('.video-como video');
   if (video && reduzir) { video.pause(); video.removeAttribute('autoplay'); video.controls = true; }
+  // O vídeo da abertura é só ilustração: com "reduzir movimento", fica na primeira imagem.
+  const abertura = document.querySelector('.video-palco video');
+  if (abertura && reduzir) { abertura.pause(); abertura.removeAttribute('autoplay'); }
 
   if (!('IntersectionObserver' in window) || reduzir) return;
   document.documentElement.classList.add('js');
@@ -112,4 +115,13 @@
     }
   }, { threshold: 0.18 });
   document.querySelectorAll('.revelar').forEach((s) => ver.observe(s));
+
+  // Palco dos passos: o marco que cruza o meio da tela define o passo à vista.
+  const palco = document.querySelector('.palco');
+  if (palco) {
+    const meio = new IntersectionObserver((entradas) => {
+      for (const e of entradas) if (e.isIntersecting) palco.dataset.passo = e.target.dataset.passo;
+    }, { rootMargin: '-50% 0px -50% 0px' });
+    palco.querySelectorAll('.marco').forEach((m) => meio.observe(m));
+  }
 })();
