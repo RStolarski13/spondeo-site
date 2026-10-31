@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url><loc>https://spondeo.com.br/</loc></url>
   <url><loc>https://spondeo.com.br/contabilidades/</loc></url>
   <url><loc>https://spondeo.com.br/nota-fiscal-whatsapp/</loc></url>
   <url><loc>https://spondeo.com.br/nfse-nacional-simples/</loc></url>
+  <url>
+    <loc>https://spondeo.com.br/demonstracao/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://spondeo.com.br/demonstracao.jpg</video:thumbnail_loc>
+      <video:title>Spondeo: veja a emissão de NFS-e pelo WhatsApp</video:title>
+      <video:description>Demonstração de 24 segundos: pedido, conferência e confirmação. Dados fictícios, sem valor fiscal.</video:description>
+      <video:content_loc>https://spondeo.com.br/como-funciona.mp4</video:content_loc>
+    </video:video>
+  </url>
 </urlset>
