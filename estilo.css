@@ -504,3 +504,26 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 .certificado-contexto .certificado-limite{font-size:.9rem;color:var(--sobre-marinho-suave)}
 
 .certificado-oferta .botao{font:inherit;font-weight:650}
+
+/* Formas de pedir: mesma família de ícones, tipografia e espaçamento da landing. */
+.formas-pedido{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px}
+.formas-pedido li{display:grid;grid-template-columns:28px 1fr;column-gap:16px;padding-top:24px;border-top:1px solid var(--borda)}
+.formas-pedido .ponto-icone{grid-row:span 2;width:28px;height:28px;background:none;color:var(--verde)}
+.formas-pedido .ponto-icone svg{width:26px;height:26px}
+.formas-pedido h3{margin:0 0 10px;font-size:1.35rem}
+.formas-pedido p{grid-column:2;margin:0;max-width:48ch}
+#rotina-organizada .grade-editorial{margin-top:32px}
+#rotina-organizada h3:not(:first-child){margin-top:32px}
+@media(max-width:700px){.formas-pedido{grid-template-columns:1fr;gap:28px}}
+
+.audio-palco{margin:0;padding:24px;border-radius:28px;background:var(--papel);color:var(--tinta)}
+.audio-pedido{display:flex;align-items:center;gap:14px;padding:20px;border-radius:18px 18px 4px 18px;background:var(--sobre-verde);color:var(--tinta)}
+.audio-pedido svg{width:30px;height:30px;fill:none;stroke:var(--verde);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.audio-pedido span{flex:1;font-weight:600}.audio-pedido strong{font-size:.9rem;font-variant-numeric:tabular-nums}
+.audio-entendido{margin:20px 0;color:var(--suave);line-height:1.5}
+.audio-resumo{padding-top:20px;border-top:1px solid var(--borda)}
+.audio-resumo p{margin:0}.audio-resumo dl{margin:16px 0 20px}
+.audio-resumo dl div{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid var(--borda)}
+.audio-resumo dt{color:var(--suave)}.audio-resumo dd{margin:0;text-align:right;font-weight:600}
+.audio-confirmar{padding:14px 20px;border-radius:999px;text-align:center;background:var(--verde);color:var(--sobre-marinho);font-weight:600}
+.audio-palco figcaption{margin-top:18px;color:var(--suave);font-size:.85rem;line-height:1.45}
