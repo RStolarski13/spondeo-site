@@ -43,13 +43,13 @@ p{margin:12px 0;max-width:62ch}
 .botao:active,.entrar:active{transform:scale(.97)}
 .botao.secundario{background:var(--fundo-forte);color:var(--tinta)}
 .botao.claro{background:var(--papel);color:var(--tinta)}
-.abertura .botao{background:var(--verde-claro);color:var(--tinta)}
+.abertura .botao,.certificados .botao{background:var(--verde-claro);color:var(--tinta)}
 .abertura .botao.secundario{background:var(--marinho-botao);color:var(--sobre-marinho)}
 @media (hover:hover) and (pointer:fine){
   .botao:hover{background:var(--azul-escuro)}
   .botao.secundario:hover{background:var(--botao-secundario-hover)}
   .botao.claro:hover{background:var(--botao-claro-hover)}
-  .abertura .botao:hover{background:var(--verde-hover)}
+  .abertura .botao:hover,.certificados .botao:hover{background:var(--verde-hover)}
   .abertura .botao.secundario:hover{background:var(--marinho-botao-hover)}
   .botao:hover{transform:translateY(-1px)}
   .topo nav a:hover{color:var(--sobre-marinho);background-size:100% 2px}
@@ -498,7 +498,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 .certificado-separado{color:var(--sobre-marinho-suave);font-size:.9rem;margin-top:16px}
 @media(max-width:1120px){.topo nav{gap:12px;margin-right:0}.topo nav a{font-size:.9rem}}
 @media(max-width:700px){
- .certificados{margin-top:72px;padding-block:48px}
+ .certificados{margin-top:96px;padding-block:48px}
  .certificado-grade{grid-template-columns:1fr;gap:28px}
  .certificado-contexto h2{max-width:20ch}
  .certificado-contexto p{margin-top:16px}
@@ -511,5 +511,3 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 
 .certificado-oferta .botao{font:inherit;font-weight:650}
 
-.certificado-escolha{padding-left:22px;margin:12px 0 24px}
-.certificado-escolha li{margin-block:4px}
