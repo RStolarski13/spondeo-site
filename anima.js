@@ -77,9 +77,6 @@
   // Com "reduzir movimento", o vídeo não toca sozinho: fica parado, com controles.
   const video = document.querySelector('.video-como video');
   if (video && reduzir) { video.pause(); video.removeAttribute('autoplay'); video.controls = true; }
-  // O vídeo da abertura é só ilustração: com "reduzir movimento", fica na primeira imagem.
-  const abertura = document.querySelector('.video-palco video');
-  if (abertura && reduzir) { abertura.pause(); abertura.removeAttribute('autoplay'); }
 
   if (!('IntersectionObserver' in window) || reduzir) return;
   document.documentElement.classList.add('js');
