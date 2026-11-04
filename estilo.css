@@ -234,9 +234,7 @@ details p{margin:0;padding:0 24px 22px}
 .abertura-contabilidade{padding-block:64px}
 .abertura-contabilidade h1{max-width:20ch}
 .acoes-contato{display:flex;flex-wrap:wrap;gap:12px}
-.contabilidades .preco{flex-wrap:wrap}
-.preco .consulta{font-size:2rem}
-.contabilidades .resumo-carteira{padding-top:20px;border-top:1px solid var(--borda)}
+.preco .consulta{font-size:2rem;line-height:1.55}
 .requisito-a1{margin-top:24px;padding:20px 24px;border:1px solid var(--borda);background:var(--aviso-fundo);border-radius:12px}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
 .requisito-a1 p{margin:0;max-width:80ch}
@@ -254,7 +252,7 @@ details p{margin:0;padding:0 24px 22px}
 .plano.destaque{background:var(--tinta);color:var(--sobre-marinho);border-color:var(--tinta);transform:translateY(-12px);box-shadow:0 30px 60px -34px var(--tinta-60)}
 .plano.destaque .nota-planos{color:var(--sobre-marinho-suave)}
 .selo-plano{position:absolute;top:-14px;left:28px;margin:0;padding:4px 12px;border-radius:999px;background:var(--verde-claro);color:var(--tinta);font-size:.85rem;font-weight:700}
-.preco{display:flex;align-items:baseline;gap:2px;margin:18px 0 22px;color:var(--suave)}
+.preco{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px;margin:18px 0 22px;color:var(--suave)}
 .preco b{font-size:3rem;line-height:1;color:var(--tinta);letter-spacing:-1px;font-variant-numeric:tabular-nums}
 .preco .moeda{font-size:1.1rem;font-weight:650;margin-right:4px;color:var(--tinta)}
 .preco .centavos{font-size:1.25rem;font-weight:700;color:var(--tinta)}
@@ -313,12 +311,8 @@ details p{margin:0;padding:0 24px 22px}
 .etapas-editoriais{list-style:none;counter-reset:passo;padding:0;margin:36px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
 .etapas-editoriais li{counter-increment:passo;padding-top:20px;border-top:2px solid var(--verde)}
 .etapas-editoriais li::before{content:counter(passo);display:block;margin-bottom:16px;color:var(--verde-texto);font-size:1.6rem;font-weight:650}
-.lista-editorial,.beneficios-carteira{padding-left:20px}
-.lista-editorial li,.beneficios-carteira li{margin-block:10px}
-.beneficios-carteira{flex:1;font-size:.95rem}
-.todas-faixas{columns:2 260px;column-gap:32px;margin:0 0 32px}.todas-faixas li{break-inside:avoid;margin-block:0 10px}
-.contabilidades .plano .nota-planos{flex:1}
-.contabilidades .destaque .nota-planos{color:var(--sobre-marinho-suave)}
+.lista-editorial{padding-left:20px}
+.lista-editorial li{margin-block:10px}
 .artigo-editorial{max-width:820px}
 .artigo-editorial h2:not(:first-child){margin-top:48px}
 .artigo-editorial p{max-width:70ch}
@@ -510,4 +504,3 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 .certificado-contexto .certificado-limite{font-size:.9rem;color:var(--sobre-marinho-suave)}
 
 .certificado-oferta .botao{font:inherit;font-weight:650}
-
