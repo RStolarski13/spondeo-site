@@ -248,7 +248,7 @@ details p{margin:0;padding:0 24px 22px}
 .escolha output{font-size:1.6rem;font-weight:700;color:var(--verde-texto);font-variant-numeric:tabular-nums;min-width:2.5ch;text-align:right}
 .escolha input{width:100%;accent-color:var(--verde);height:28px}
 .escolha-marcas{display:flex;justify-content:space-between;font-size:.82rem;color:var(--suave)}
-.planos{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.planos{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:stretch}
 .plano{position:relative;background:var(--papel);border:1px solid var(--borda);border-radius:18px;padding:32px 28px 28px;
   transition:transform 320ms var(--ease-out),box-shadow 320ms var(--ease-out),border-color 200ms ease}
 .plano h3{margin:0;font-size:1.25rem}
@@ -612,3 +612,8 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 @media(max-width:600px){.guia-tabela th,.guia-tabela td{padding:12px 5px}.guia .chamada .botao{max-width:100%;text-align:center}}
 
 .guia .abertura-texto>*,.guia .entrada-editorial{animation:none}
+/* Rodada de vendas (05/11/2026): custo por dia, anual e pacote com o certificado. */
+.por-dia{margin:-4px 0 12px;color:var(--suave);font-size:.9rem}
+.anual{margin-top:24px;max-width:62ch}
+.certificado-pacote{margin-top:16px;max-width:40ch}
+.plano.destaque .por-dia{color:var(--preco-destaque)}
