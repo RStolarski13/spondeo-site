@@ -667,7 +667,6 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 
 /* Mensagem de voz (Rafael, 05/11/2026): onda estática como no WhatsApp; o trecho tocado ganha
    cor (clip-path), o cursor corre e o tempo conta. Explicação de marketing, toca uma vez. */
-@property --seg{syntax:'<integer>';initial-value:12;inherits:false}
 .voz{gap:12px;padding:14px 16px}
 .voz-play{position:relative;display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:var(--verde);color:var(--sobre-marinho)}
 .voz-play svg{width:18px;height:18px;fill:currentColor;stroke:none}
@@ -679,7 +678,12 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 .voz-barras .h1{height:20%}.voz-barras .h2{height:35%}.voz-barras .h3{height:55%}.voz-barras .h4{height:75%}.voz-barras .h5{height:95%}
 .voz-trilho{position:absolute;inset:0;pointer-events:none}
 .voz-cursor{position:absolute;left:0;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--verde);box-shadow:0 1px 3px var(--tinta-35)}
-.voz-tempo{flex:none;min-width:2.6em;text-align:right;font-size:.9rem;font-variant-numeric:tabular-nums}
+.voz-tempo{flex:none;min-width:2.6em;height:1.25em;line-height:1.25em;overflow:hidden;text-align:right;font-size:.9rem;font-variant-numeric:tabular-nums}
+/* Rolo de 0:00 a 0:12: sobe um segundo por passo, igual em todo navegador. Parado mostra 0:12. */
+.voz-rolo{display:block;transform:translateY(-15em)}
+.voz-rolo span{display:block}
+.js .abertura .voz .voz-rolo{animation:voz-contar 3s steps(12,end) var(--t0) both}
+@keyframes voz-contar{from{transform:none}to{transform:translateY(-15em)}}
 .voz .voz-cursor{transform:translateX(0)}
 .voz .voz-trilho{transform:translateX(100%)}
 /* Estado parado (sem .js): áudio já ouvido, tudo à vista. */
@@ -690,8 +694,6 @@ html:not(.sem-abertura):has(.abre-logo) .abertura .voz{--t0:3.15s}
 .js .abertura .voz .voz-trilho{animation:voz-correr 3s linear var(--t0) both}
 .js .abertura .voz .ic-play{animation:voz-some 3s steps(1,end) var(--t0) forwards}
 .js .abertura .voz .ic-pausa{animation:voz-aparece 3s steps(1,end) var(--t0) forwards}
-.js .abertura .voz .voz-tempo span{display:none}
-.js .abertura .voz .voz-tempo::after{counter-reset:seg var(--seg);content:"0:" counter(seg,decimal-leading-zero);animation:voz-contar 3s linear var(--t0) both}
 .js .abertura .audio-entendido{animation:voz-surgir .45s var(--ease-out) calc(var(--t0,.9s) + 3.1s) both}
 .js .abertura .audio-resumo>*{animation:voz-surgir .45s var(--ease-out) calc(var(--t0,.9s) + 3.45s) both}
 .js .abertura .audio-resumo dl div:nth-child(2){animation-delay:calc(var(--t0,.9s) + 3.51s)}
@@ -703,7 +705,6 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 @keyframes voz-correr{from{transform:translateX(0)}to{transform:translateX(100%)}}
 @keyframes voz-some{0%{opacity:0}100%{opacity:1}}
 @keyframes voz-aparece{0%{opacity:1}100%{opacity:0}}
-@keyframes voz-contar{from{--seg:0}to{--seg:12}}
 @keyframes voz-surgir{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
 /* Passo 1: quatro jeitos de pedir, entrando em sequência quando o passo aparece. */
@@ -716,8 +717,10 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 .voz-mini .voz-onda{height:22px}
 .voz-mini .voz-cursor{width:9px;height:9px;margin:-4.5px 0 0 -4.5px}
 .anexo{width:230px}
+.bolha.anexo{margin:0}
 .miniatura{flex:none;width:34px;height:34px;border-radius:6px;background:var(--verde-fundo);display:grid;place-items:center}
-.miniatura svg{width:26px;height:26px;fill:var(--papel);stroke:var(--verde);stroke-width:1.6;stroke-linecap:round}
+.miniatura svg{width:26px;height:26px;fill:var(--papel);stroke:var(--verde);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.miniatura path{fill:none}
 .selo-pdf{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:6px;background:var(--pdf);color:var(--sobre-marinho);font-size:.68rem;font-weight:800;letter-spacing:.02em}
 .bolha.texto{padding:8px 12px}
 .js .palco[data-passo="1"] .bolha{animation:voz-surgir .4s var(--ease-out) both}
@@ -737,3 +740,21 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 .planos-controles .ciclo{margin:0}
 .planos-controles .escolha{flex:1 1 320px;max-width:560px;margin:0}
 .selo-mei{background:var(--verde-fundo);color:var(--verde-texto)}
+
+/* Faixas do escritório (05/11/2026): a mesma anatomia dos planos (nome, faixa, preço, total,
+   botão); o que é igual nas três faixas fica uma vez só, logo abaixo. */
+.planos.faixas{grid-template-columns:repeat(3,minmax(0,1fr))}
+.faixa{margin:6px 0 0;color:var(--suave);font-size:.95rem}
+.plano.destaque .faixa{color:var(--sobre-marinho-suave)}
+.faixas .por-dia{flex:1}
+.faixas .preco .consulta{font-size:2.25rem;line-height:1;letter-spacing:-.5px}
+.incluso{margin-top:40px;padding-top:24px;border-top:1px solid var(--borda)}
+.incluso h3{margin:0 0 16px;font-size:1.05rem}
+.incluso .vantagens{padding:0;border:0;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 32px}
+.incluso .vantagens li:first-child{font-weight:inherit}
+@media(max-width:860px){
+  .planos.faixas{display:grid;grid-template-columns:1fr;gap:16px;margin-inline:0;padding:0;overflow:visible}
+  .planos.faixas .plano{padding:24px 22px 22px}
+  .incluso .vantagens{grid-template-columns:1fr}
+}
+.incluso+.nota-planos{margin-top:24px}
