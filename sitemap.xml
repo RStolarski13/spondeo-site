@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url><loc>https://spondeo.com.br/</loc></url>
   <url><loc>https://spondeo.com.br/contabilidades/</loc></url>
-  <url><loc>https://spondeo.com.br/nota-fiscal-whatsapp/</loc></url>
-  <url><loc>https://spondeo.com.br/nfse-nacional-simples/</loc></url>
+  <url><loc>https://spondeo.com.br/nota-fiscal-whatsapp/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://spondeo.com.br/nfse-nacional-simples/</loc><lastmod>2026-11-05</lastmod></url>
   <url>
     <loc>https://spondeo.com.br/demonstracao/</loc>
     <video:video>
@@ -13,4 +13,10 @@
       <video:content_loc>https://spondeo.com.br/como-funciona.mp4</video:content_loc>
     </video:video>
   </url>
+  <url><loc>https://spondeo.com.br/emissor-nacional-obrigatorio-simples/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://spondeo.com.br/emitir-nfse-pelo-celular/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://spondeo.com.br/erros-emissor-nacional/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://spondeo.com.br/nota-fiscal-mei-whatsapp/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://spondeo.com.br/certificado-digital-nfse/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://spondeo.com.br/nfse-prestador-de-servico-na-rua/</loc><lastmod>2026-11-05</lastmod></url>
 </urlset>

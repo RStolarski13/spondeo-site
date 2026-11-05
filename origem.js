@@ -33,6 +33,7 @@
     const interna = url.origin === location.origin && paginas.has(url.pathname);
     const cadastro = url.origin === 'https://app.spondeo.com.br' &&
       (url.pathname === '/cadastro' || /^\/assinar\/(essencial|profissional|completo)$/.test(url.pathname));
+    if (cadastro && url.searchParams.get('origem') === 'guia') return;
     if (interna || cadastro) {
       url.searchParams.set('origem', origem);
       link.href = url.href;

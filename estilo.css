@@ -600,3 +600,15 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 }
 @keyframes acenar{0%,88%,100%{transform:none}92%{transform:translateX(5px)}96%{transform:translateX(0)}}
 @keyframes desenhar{to{stroke-dashoffset:0}}
+
+/* Leitura dos guias: reaproveita a tipografia e os tokens editoriais. */
+.guia .artigo-editorial nav,.guia .artigo-editorial section{margin-top:48px}
+.guia .artigo-editorial{overflow-wrap:anywhere}
+.guia-tabela table{width:100%;border-collapse:collapse;font-size:.95rem;line-height:1.5;margin-block:24px}
+.guia-tabela caption{text-align:left;font-weight:650;margin-bottom:12px}
+.guia-tabela th,.guia-tabela td{text-align:left;vertical-align:top;border-bottom:1px solid var(--borda);padding:12px 8px}
+.guia-tabela thead{background:var(--fundo)}
+.guia-tabela tr>:first-child{white-space:nowrap;overflow-wrap:normal}
+@media(max-width:600px){.guia-tabela th,.guia-tabela td{padding:12px 5px}.guia .chamada .botao{max-width:100%;text-align:center}}
+
+.guia .abertura-texto>*,.guia .entrada-editorial{animation:none}
