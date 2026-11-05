@@ -612,8 +612,128 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 @media(max-width:600px){.guia-tabela th,.guia-tabela td{padding:12px 5px}.guia .chamada .botao{max-width:100%;text-align:center}}
 
 .guia .abertura-texto>*,.guia .entrada-editorial{animation:none}
-/* Rodada de vendas (05/11/2026): custo por dia, anual e pacote com o certificado. */
-.por-dia{margin:-4px 0 12px;color:var(--suave);font-size:.9rem}
-.anual{margin-top:24px;max-width:62ch}
-.certificado-pacote{margin-top:16px;max-width:40ch}
+/* Planos e certificado (Rafael, 05/11/2026): chave mensal/anual só com CSS (rádios + :has),
+   e o certificado com duas ofertas lado a lado. Sem :has, mostra o mensal. */
+.ciclo{display:inline-flex;gap:4px;margin:32px 0 0;padding:4px;border:0;border-radius:999px;background:var(--fundo-forte)}
+.ciclo legend,.oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ciclo input{position:absolute;opacity:0;width:1px;height:1px}
+.ciclo label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 20px;border-radius:999px;font-weight:650;color:var(--suave);cursor:pointer;user-select:none;
+  transition:background-color 200ms var(--ease-out),color 200ms var(--ease-out),box-shadow 200ms var(--ease-out)}
+.ciclo input:checked+label{background:var(--papel);color:var(--tinta);box-shadow:0 1px 3px var(--tinta-25)}
+.ciclo input:focus-visible+label{outline:2px solid var(--verde);outline-offset:2px}
+.economia{padding:2px 8px;border-radius:999px;background:var(--verde-fundo);color:var(--verde-texto);font-size:.78rem;font-weight:700}
+#planos:not(:has(#ciclo-anual:checked)) .so-anual,#planos:has(#ciclo-anual:checked) .so-mensal{display:none}
+.restricao{margin:6px 0 0;color:var(--verde-texto);font-size:.85rem;font-weight:650}
+.preco{margin-bottom:4px}
+.por-dia{margin:0 0 22px;color:var(--suave);font-size:.9rem}
 .plano.destaque .por-dia{color:var(--preco-destaque)}
+.planos{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1100px) and (min-width:761px){.planos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
+@media (prefers-reduced-motion:reduce){.ciclo label{transition:none}}
+
+/* Certificado (05/11/2026): mesma anatomia dos cartões de plano, sobre a faixa escura.
+   O pacote é o cartão claro (o destaque, como o Profissional nos planos). */
+.certificado-contexto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end}
+.certificado-contexto h2{margin:0}
+.certificado-contexto p{margin:0;max-width:52ch;color:var(--sobre-marinho-texto)}
+.certificado-ofertas{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.cert-cartao{position:relative;display:flex;flex-direction:column;padding:32px 28px 28px;border-radius:18px;border:1px solid var(--marinho-borda);background:var(--tinta)}
+.cert-cartao h3{margin:0;font-size:1.25rem;color:var(--sobre-marinho)}
+.cert-sub{margin:6px 0 0;color:var(--sobre-marinho-suave);font-size:.95rem}
+.cert-cartao .preco{margin:18px 0 4px}
+.cert-cartao .preco b,.cert-cartao .preco .moeda,.cert-cartao .preco .centavos{color:var(--sobre-marinho)}
+.cert-cartao .preco .mes{color:var(--preco-destaque)}
+.cert-cartao .vantagens{flex:1;align-content:start;margin-top:18px;border-top-color:var(--marinho-linha);color:var(--sobre-marinho-texto)}
+.cert-cartao .vantagens svg{stroke:var(--verde-claro)}
+.cert-de{margin:0;color:var(--preco-destaque);font-size:.9rem}
+.cert-de s{text-decoration-thickness:1.5px}
+.cert-botao{margin-top:28px;width:100%}
+.certificados .cert-cartao:not(.pacote) .cert-botao{background:transparent;color:var(--sobre-marinho);box-shadow:inset 0 0 0 1.5px var(--marinho-divisa)}
+.cert-cartao.pacote{background:var(--papel);border-color:var(--papel);color:var(--tinta);box-shadow:0 30px 60px -34px var(--sombra-palco)}
+.cert-cartao.pacote h3,.cert-cartao.pacote .preco b,.cert-cartao.pacote .preco .moeda,.cert-cartao.pacote .preco .centavos{color:var(--tinta)}
+.cert-cartao.pacote :is(.cert-sub,.preco .mes,.cert-de){color:var(--suave)}
+.cert-cartao.pacote .vantagens{color:var(--tinta);border-top-color:var(--borda)}
+.cert-cartao.pacote .vantagens svg{stroke:var(--verde)}
+.certificados .cert-cartao.pacote .cert-botao{background:var(--verde);color:var(--sobre-marinho)}
+@media (hover:hover) and (pointer:fine){
+ .certificados .cert-cartao:not(.pacote) .cert-botao:hover{background:var(--marinho-botao)}
+ .certificados .cert-cartao.pacote .cert-botao:hover{background:var(--verde-texto)}
+}
+@media(max-width:1000px){
+ .certificado-contexto{grid-template-columns:1fr;gap:16px}
+ .certificado-ofertas{grid-template-columns:1fr;gap:36px;margin-top:36px}
+}
+}
+
+/* Mensagem de voz (Rafael, 05/11/2026): onda estática como no WhatsApp; o trecho tocado ganha
+   cor (clip-path), o cursor corre e o tempo conta. Explicação de marketing, toca uma vez. */
+@property --seg{syntax:'<integer>';initial-value:12;inherits:false}
+.voz{gap:12px;padding:14px 16px}
+.voz-play{position:relative;display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:var(--verde);color:var(--sobre-marinho)}
+.voz-play svg{width:18px;height:18px;fill:currentColor;stroke:none}
+.voz-play .ic-pausa{position:absolute;opacity:0}
+.voz-onda{position:relative;flex:1;min-width:0;height:32px;display:flex;align-items:center}
+.voz-barras{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between}
+.voz-barras i{width:3px;border-radius:2px;background:var(--tinta-25)}
+.voz-barras.tocado i{background:var(--verde)}
+.voz-barras .h1{height:20%}.voz-barras .h2{height:35%}.voz-barras .h3{height:55%}.voz-barras .h4{height:75%}.voz-barras .h5{height:95%}
+.voz-trilho{position:absolute;inset:0;pointer-events:none}
+.voz-cursor{position:absolute;left:0;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--verde);box-shadow:0 1px 3px var(--tinta-35)}
+.voz-tempo{flex:none;min-width:2.6em;text-align:right;font-size:.9rem;font-variant-numeric:tabular-nums}
+.voz .voz-cursor{transform:translateX(0)}
+.voz .voz-trilho{transform:translateX(100%)}
+/* Estado parado (sem .js): áudio já ouvido, tudo à vista. */
+.voz .voz-barras.tocado{clip-path:inset(0)}
+.js .abertura .voz{--t0:.9s}
+html:not(.sem-abertura):has(.abre-logo) .abertura .voz{--t0:3.15s}
+.js .abertura .voz .voz-barras.tocado{animation:voz-tocar 3s linear var(--t0) both}
+.js .abertura .voz .voz-trilho{animation:voz-correr 3s linear var(--t0) both}
+.js .abertura .voz .ic-play{animation:voz-some 3s steps(1,end) var(--t0) forwards}
+.js .abertura .voz .ic-pausa{animation:voz-aparece 3s steps(1,end) var(--t0) forwards}
+.js .abertura .voz .voz-tempo span{display:none}
+.js .abertura .voz .voz-tempo::after{counter-reset:seg var(--seg);content:"0:" counter(seg,decimal-leading-zero);animation:voz-contar 3s linear var(--t0) both}
+.js .abertura .audio-entendido{animation:voz-surgir .45s var(--ease-out) calc(var(--t0,.9s) + 3.1s) both}
+.js .abertura .audio-resumo>*{animation:voz-surgir .45s var(--ease-out) calc(var(--t0,.9s) + 3.45s) both}
+.js .abertura .audio-resumo dl div:nth-child(2){animation-delay:calc(var(--t0,.9s) + 3.51s)}
+.js .abertura .audio-resumo dl div:nth-child(3){animation-delay:calc(var(--t0,.9s) + 3.57s)}
+.js .abertura .audio-resumo dl div{animation:voz-surgir .45s var(--ease-out) calc(var(--t0,.9s) + 3.45s) both}
+.js .abertura .audio-confirmar{animation:voz-surgir .45s var(--ease-out) calc(var(--t0,.9s) + 3.75s) both}
+html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-resumo>*,.audio-resumo dl div,.audio-confirmar){--t0:3.15s}
+@keyframes voz-tocar{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@keyframes voz-correr{from{transform:translateX(0)}to{transform:translateX(100%)}}
+@keyframes voz-some{0%{opacity:0}100%{opacity:1}}
+@keyframes voz-aparece{0%{opacity:1}100%{opacity:0}}
+@keyframes voz-contar{from{--seg:0}to{--seg:12}}
+@keyframes voz-surgir{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* Passo 1: quatro jeitos de pedir, entrando em sequência quando o passo aparece. */
+.quadro.bolhas{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:7px;padding:16px}
+.bolha{max-width:92%;display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:12px 12px 4px 12px;background:var(--balao-meu);color:var(--chat-texto);font-size:.88rem;line-height:1.3;box-shadow:0 1px .5px var(--chat-sombra);text-align:left}
+.bolha small{display:block;color:var(--chat-hora);font-size:.75rem}
+.bolha b{display:block;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.voz-mini{width:230px}
+.voz-mini .voz-play{width:28px;height:28px}.voz-mini .voz-play svg{width:13px;height:13px}
+.voz-mini .voz-onda{height:22px}
+.voz-mini .voz-cursor{width:9px;height:9px;margin:-4.5px 0 0 -4.5px}
+.anexo{width:230px}
+.miniatura{flex:none;width:34px;height:34px;border-radius:6px;background:var(--verde-fundo);display:grid;place-items:center}
+.miniatura svg{width:26px;height:26px;fill:var(--papel);stroke:var(--verde);stroke-width:1.6;stroke-linecap:round}
+.selo-pdf{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:6px;background:var(--pdf);color:var(--sobre-marinho);font-size:.68rem;font-weight:800;letter-spacing:.02em}
+.bolha.texto{padding:8px 12px}
+.js .palco[data-passo="1"] .bolha{animation:voz-surgir .4s var(--ease-out) both}
+.js .palco[data-passo="1"] .bolha:nth-child(2){animation-delay:.14s}
+.js .palco[data-passo="1"] .bolha:nth-child(3){animation-delay:.28s}
+.js .palco[data-passo="1"] .bolha:nth-child(4){animation-delay:.42s}
+.js .palco[data-passo="1"] .voz-mini .voz-barras.tocado{animation:voz-tocar 2.2s linear .7s both}
+.js .palco[data-passo="1"] .voz-mini .voz-trilho{animation:voz-correr 2.2s linear .7s both}
+.js .palco[data-passo="1"] .voz-mini .ic-play{animation:voz-some 2.2s steps(1,end) .7s forwards}
+.js .palco[data-passo="1"] .voz-mini .ic-pausa{animation:voz-aparece 2.2s steps(1,end) .7s forwards}
+@media(max-width:700px){.voz-mini,.anexo{width:210px}.bolha{font-size:.82rem}}
+.audio-pedido.voz>.voz-play{flex:0 0 40px}.audio-pedido.voz>.voz-onda{flex:1 1 auto;font-weight:400}.bolha>.voz-play{flex:0 0 28px}
+.voz-mini .voz-onda{margin-right:6px}
+
+/* Controles dos planos numa linha: a chave mensal/anual decide o preço; a régua indica o plano. */
+.planos-controles{display:flex;flex-wrap:wrap;align-items:center;gap:20px 48px;margin-top:32px}
+.planos-controles .ciclo{margin:0}
+.planos-controles .escolha{flex:1 1 320px;max-width:560px;margin:0}
+.selo-mei{background:var(--verde-fundo);color:var(--verde-texto)}
