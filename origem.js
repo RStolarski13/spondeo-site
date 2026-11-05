@@ -1,4 +1,5 @@
-// Só repassa o nome do canal. Não envia rede nem usa armazenamento no navegador.
+// Repassa o nome do canal ao cadastro e conta a visita, anônima: sem cookie, sem armazenamento
+// no navegador e sem identificador (Claude, 04/11/2026; antes o funil do admin ficava em zero).
 (() => {
   const canais = new Set(['google', 'bing', 'instagram', 'facebook', 'whatsapp', 'email']);
   const parametros = new URL(location.href).searchParams;
@@ -17,6 +18,13 @@
       'lm.facebook.com': 'facebook', 'm.facebook.com': 'facebook',
     }[host];
   }
+  const pagina = {'/': 'inicio', '/contabilidades/': 'contabilidades', '/nota-fiscal-whatsapp/': 'nota-fiscal-whatsapp',
+    '/nfse-nacional-simples/': 'nfse-nacional-simples', '/demonstracao/': 'demonstracao'}[location.pathname];
+  const tela = innerWidth < 600 ? 'celular' : innerWidth < 1024 ? 'tablet' : 'computador';
+  const veio = ['google', 'instagram', 'facebook', 'whatsapp'].includes(origem) ? origem : (origem ? 'outro' : 'direto');
+  // Texto simples: pedido sem pré-verificação de CORS; o servidor só aceita o site do Spondeo.
+  if (pagina) fetch('https://app.spondeo.com.br/m', {method: 'POST', mode: 'no-cors', keepalive: true,
+    body: JSON.stringify({p: pagina, o: veio, t: tela})}).catch(() => {});
   if (!canais.has(origem)) return;
   const paginas = new Set(['/', '/contabilidades/', '/nota-fiscal-whatsapp/', '/nfse-nacional-simples/']);
   document.querySelectorAll('a[href]').forEach(link => {

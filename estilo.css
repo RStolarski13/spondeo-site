@@ -571,3 +571,29 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
   .js .marco{height:70svh}
   .js .marco[data-passo="2"]{top:70svh}.js .marco[data-passo="3"]{top:140svh}
 }
+
+/* Ícones animados (Claude, 04/11/2026, regra do Rafael: o site parece vivo). Seta do botão avança,
+   desce ou sobe conforme a ação; ícones das listas se desenham ao entrar. Só transform e traço. */
+.botao .ic{width:18px;height:18px;margin-left:8px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease-out)}
+.botao:active .ic[data-ic=seguir]{transform:translateX(4px)}
+.botao:active .ic[data-ic=descer]{transform:translateY(3px)}
+.botao:active .ic[data-ic=abrir]{transform:translate(2px,-2px)}
+@media (hover:hover) and (pointer:fine){
+  .botao:hover .ic[data-ic=seguir]{transform:translateX(4px)}
+  .botao:hover .ic[data-ic=descer]{transform:translateY(3px)}
+  .botao:hover .ic[data-ic=abrir]{transform:translate(2px,-2px)}
+}
+@media (prefers-reduced-motion:no-preference){
+  /* a ação principal do topo dá um leve aceno de vez em quando */
+  .abertura .acoes .botao:not(.secundario) .ic{animation:acenar 4s var(--ease-out) 3s infinite}
+  .js .revelar .ponto-icone :is(path,rect,circle){stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1s var(--ease-out) .3s}
+  .js .revelar.visivel .ponto-icone :is(path,rect,circle){stroke-dashoffset:0}
+  .garantias svg path{stroke-dasharray:1;stroke-dashoffset:1;animation:desenhar .7s var(--ease-out) forwards}
+  .garantias li:nth-child(1) svg path{animation-delay:.9s}
+  .garantias li:nth-child(2) svg path{animation-delay:1.05s}
+  .garantias li:nth-child(3) svg path{animation-delay:1.2s}
+  .garantias li:nth-child(4) svg path{animation-delay:1.35s}
+  html:not(.sem-abertura):has(.abre-logo) .garantias svg path{animation-delay:2.9s}
+}
+@keyframes acenar{0%,88%,100%{transform:none}92%{transform:translateX(5px)}96%{transform:translateX(0)}}
+@keyframes desenhar{to{stroke-dashoffset:0}}
