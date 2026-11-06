@@ -29,7 +29,7 @@
     const link = evento.target.closest('a[href]');
     if (!link || evento.button !== 0 || evento.ctrlKey || evento.metaKey ||
         evento.shiftKey || evento.altKey || link.hasAttribute('download') ||
-        (link.target && link.target !== '_self')) return;
+        (link.target && link.target !== '_self') || link.hasAttribute('data-abrir')) return;  // popup, não navega
     const url = new URL(link.href);
     if (url.origin !== location.origin ||
         (url.pathname === location.pathname && url.search === location.search)) return;
@@ -41,6 +41,8 @@
     const botao = evento.submitter;
     const target = botao?.getAttribute('formtarget') || form.target;
     const destino = new URL(botao?.getAttribute('formaction') || form.action, location.href);
+    // Popup de confirmação ainda aberto (confirmar.js): só navega depois do "Sim".
+    if (form.matches('[data-confirmar]:not([data-confirmado])')) return;
     if (botao?.hasAttribute('data-download') || form.method === 'dialog' || (target && target !== '_self') ||
         destino.origin !== location.origin) return;
     queueMicrotask(() => { if (!evento.defaultPrevented) aguardar(); });

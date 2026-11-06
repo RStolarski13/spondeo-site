@@ -115,7 +115,7 @@
     <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Carteira, pendências e equipe com permissões</li>
     <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Emissão em lote, modelos mensais e fechamento em CSV/ZIP</li>
     <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Procuração eletrônica ou A1 de cada empresa</li>
-    <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Cancelamento e correção das notas pelo painel</li>
+    <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Correção de notas pelo painel; cancelamento com o A1 da empresa</li>
   </ul>
 </div>
 <p class="nota-planos">Escolha a quantidade e confira o total mensal no painel do escritório antes de contratar. Para 25 empresas ou mais, as condições são definidas por proposta. Para menos de 5 empresas, <a href="/#planos">consulte os planos individuais</a>.</p>
@@ -158,7 +158,7 @@
 </details>
 <details>
 <summary>Posso usar o mesmo certificado para todos?</summary>
-<p>Sim, por procuração eletrônica. Cada empresa autoriza o CNPJ do escritório no serviço NFS-e do Portal de Serviços da Receita, sem custo, pelo gov.br. O escritório cadastra o próprio certificado A1 uma vez e o Spondeo confere a procuração antes de incluir a empresa. Quem preferir pode usar o A1 de cada empresa. Por procuração, o cancelamento de nota ainda é feito no Emissor Nacional, por regra da Receita. Os arquivos e as senhas entram somente pelo cadastro seguro.</p>
+<p>Sim, por procuração eletrônica, que já funciona em produção: emissão e correção por procuração foram testadas em notas reais em novembro de 2026. Cada empresa autoriza o CNPJ do escritório no serviço NFS-e do Portal de Serviços da Receita, sem custo, pelo gov.br. O escritório cadastra o próprio certificado A1 uma vez e o Spondeo confere a procuração antes de incluir a empresa. Quem preferir pode usar o A1 de cada empresa. Por procuração, o cancelamento de nota ainda é feito no Emissor Nacional, por regra da Receita. Os arquivos e as senhas entram somente pelo cadastro seguro.</p>
 </details>
 <details>
 <summary>Quem responde pela nota emitida pelo escritório?</summary>
@@ -181,9 +181,20 @@
 <p>A partir de 25 empresas, as condições são definidas por proposta. Peça pela área do escritório ou pelo e-mail <a href="mailto:app.spondeo@gmail.com">app.spondeo@gmail.com</a>. A cobrança considera as empresas contratadas, e a quantidade contratada limita as empresas ativas.</p>
 </details>
 <details>
-<summary>Como conhecer o sistema antes de contratar?</summary>
-<p>Crie o acesso do escritório e cadastre uma empresa para testar com 10 notas sem valor fiscal. <a href="/nota-fiscal-whatsapp/">Veja os requisitos e o passo a passo.</a>
-</p>
+<summary>Como funciona o teste grátis do escritório?</summary>
+<p>Crie o acesso do escritório e cadastre as empresas que quiser. Cada empresa emite até 10 notas de teste, sem valor fiscal: elas vão para o ambiente de testes da Receita, nunca para clientes de verdade. Nada é cobrado até você contratar no painel, em Plano. Ao contratar, as empresas passam a emitir notas reais, até a quantidade escolhida. <a href="/nota-fiscal-whatsapp/">Veja os requisitos e o passo a passo.</a></p>
+</details>
+<details>
+<summary>Tenho menos de 5 empresas. Quanto pago?</summary>
+<p>A menor faixa do escritório é de 5 empresas: R$ 299,50 por mês, mesmo com menos empresas na carteira. Para uma ou duas empresas, costuma sair mais barato cada uma assinar o próprio plano, a partir de R$ 24,90 por mês no MEI. <a href="/#planos">Veja os planos individuais.</a></p>
+</details>
+<details>
+<summary>Como cancelo?</summary>
+<p>No painel do escritório, em Plano, abra Cancelar assinatura e confirme. O cancelamento vale para as próximas renovações: o acesso segue até o fim do período pago, sem multa nem fidelidade.</p>
+</details>
+<details>
+<summary>Por que o rodapé mostra uma razão social com nome de pessoa?</summary>
+<p>Spondeo é o nome fantasia. O rodapé mostra a razão social e o CNPJ da empresa responsável pelo serviço, como exige a lei para quem vende pela internet (Decreto 7.962/2013). A contratação e a nota fiscal da assinatura saem em nome desse CNPJ.</p>
 </details>
 </section>
 <section class="chamada revelar" id="contato">
@@ -221,7 +232,7 @@
       </nav>
       <small>© 2026 Spondeo</small>
     </div>
-    <p class="nota-planos">Razão social: 69.817.804 RAFAEL ANTONIO STOLARSKI<br>CNPJ: 69.817.804/0001-84</p>
+    <p class="nota-planos">Spondeo é o nome fantasia de<br>Razão social: 69.817.804 RAFAEL ANTONIO STOLARSKI<br>CNPJ: 69.817.804/0001-84</p>
   </div>
 </footer>
 <script src="/anima.js?v=5" defer></script>
