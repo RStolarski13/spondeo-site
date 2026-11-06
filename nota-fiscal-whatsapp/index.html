@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Demonstração ilustrativa de nota de serviço pelo WhatsApp no Spondeo">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/estilo.css?v=20261104-icones">
+<link rel="stylesheet" href="/estilo.css?v=20261106-cert">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://spondeo.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Como emitir nota de serviço pelo WhatsApp?", "item": "https://spondeo.com.br/nota-fiscal-whatsapp/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Como emitir nota de serviço pelo WhatsApp?", "dateModified": "2026-11-05", "inLanguage": "pt-BR", "mainEntityOfPage": "https://spondeo.com.br/nota-fiscal-whatsapp/", "author": {"@type": "Organization", "name": "Spondeo"}, "image": "https://spondeo.com.br/como-funciona.jpg", "citation": ["https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual/guia-emissorpubliconacionalweb_snnfse-ern-v1-3.pdf", "https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual/manual-contribuintes-emissor-publico-api-sistema-nacional-nfs-e-v1-2-out2025.pdf", "https://www.gov.br/iti/pt-br/assuntos/icp-brasil/certificado-digital"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como emitir nota de serviço pelo WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "No Spondeo, mande áudio ou texto com cliente, serviço e valor. Confira o resumo e confirme. Após a autorização, o PDF chega no WhatsApp. Requer e-CNPJ A1 válido da empresa."}}, {"@type": "Question", "name": "Posso emitir mandando um áudio?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Fale o cliente, o serviço e o valor. O Spondeo mostra o texto entendido e o resumo. Confira tudo antes de confirmar. Se algum dado não estiver claro, corrija na conversa. Áudios de até 90 segundos."}}, {"@type": "Question", "name": "Que foto ou PDF posso mandar?", "acceptedAnswer": {"@type": "Answer", "text": "Um pedido, uma anotação, uma captura de tela ou um boleto com os dados do serviço. O Spondeo lê o arquivo e prepara o resumo. Em um boleto, o pagador é o cliente da nota. O arquivo não é pago e nenhuma nota é emitida sem sua confirmação."}}, {"@type": "Question", "name": "A planilha vai pelo WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. No Profissional e no Completo, use o modelo do painel e mande CSV ou Excel (.xlsx), com os dados na primeira aba. Confira o resumo e toque em Emitir todas. São até 50 notas por envio no WhatsApp. Pelo painel, o arquivo aceita até 200 linhas, respeitado o limite de 50 notas por lote do Profissional."}}, {"@type": "Question", "name": "Consigo pedir segunda via ou corrigir uma nota?", "acceptedAnswer": {"@type": "Answer", "text": "Peça o PDF ou o Pix novamente pela conversa. Você também pode corrigir dados e solicitar o cancelamento de uma nota, conforme as regras aplicáveis."}}]}</script>
@@ -27,17 +27,20 @@
 <body class="guia">
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 <header class="topo">
-<div class="largura topo-linha">
-<a class="marca" href="/">
-<img src="/spondeo-logo-negativo.svg" alt="Spondeo: início" width="155" height="30">
-</a>
-<nav aria-label="Seções">
-<a href="/nota-fiscal-whatsapp/">Como funciona</a>
-<a href="/#planos">Planos</a>
-<a href="/contabilidades/">Contabilidades</a>
-</nav>
-<a class="entrar" href="https://app.spondeo.com.br/entrar">Entrar</a>
-</div>
+  <div class="largura topo-linha">
+    <a class="marca" href="/"><img src="/spondeo-logo-negativo.svg" alt="Spondeo: início" width="155" height="30"></a>
+    <nav aria-label="Seções">
+      <a href="/#como-funciona">Como funciona</a>
+      <a href="/#painel">Painel</a>
+      <a href="/#planos">Planos</a>
+      <a href="/#certificados">Certificados</a>
+      <a href="/#seguranca">Segurança</a>
+      <a href="/#perguntas">Perguntas</a>
+      <a href="/contabilidades/">Contabilidades</a>
+    </nav>
+    <a class="entrar" href="https://app.spondeo.com.br/entrar" data-link="painel">Entrar</a>
+    <a class="topo-cta" href="https://app.spondeo.com.br/cadastro" data-link="cadastro">Teste grátis</a>
+  </div>
 </header>
 <main id="conteudo" tabindex="-1">
 <section class="abertura">
@@ -72,8 +75,8 @@
 </li>
 </ol>
 <figure class="video-como">
-<video controls playsinline preload="none" poster="/como-funciona.jpg" aria-label="Demonstração ilustrativa do Spondeo, com dados fictícios">
-<source src="/como-funciona.mp4" type="video/mp4">
+<video controls playsinline preload="none" poster="/como-funciona.jpg?v=2" aria-label="Demonstração ilustrativa do Spondeo, com dados fictícios">
+<source src="/como-funciona.mp4?v=2" type="video/mp4">
 </video>
 </figure>
 <p class="nota-planos">Demonstração ilustrativa com dados fictícios. <a href="/demonstracao/">Ver o vídeo e a descrição das cenas</a>.</p>
@@ -118,7 +121,7 @@
 <details><summary>Consigo pedir segunda via ou corrigir uma nota?</summary><p>Peça o PDF ou o Pix novamente pela conversa. Você também pode corrigir dados e solicitar o cancelamento de uma nota, conforme as regras aplicáveis.</p></details>
 <details>
 <summary>Quanto custa emitir pelo Spondeo?</summary>
-<p>Os planos individuais começam em R$ 49,90 por mês, sem taxa por nota. Não tem e-CNPJ A1? O Spondeo vende o certificado. Compare os recursos e limites de clientes nos <a href="/#planos">planos do Spondeo</a>; o teste oferece 10 notas sem valor fiscal.</p>
+<p>Os planos individuais começam em R$ 24,90 por mês no MEI e R$ 49,90 nos demais, sem taxa por nota. Não tem e-CNPJ A1? O Spondeo vende o certificado. Compare os recursos e limites de clientes nos <a href="/#planos">planos do Spondeo</a>; o teste oferece 10 notas sem valor fiscal.</p>
 </details>
 <details>
 <summary>Preciso conversar com alguém para contratar?</summary>
@@ -155,40 +158,45 @@
 </section>
 
 <div class="largura artigo-editorial"><nav aria-label="Guias relacionados"><h2>Continue a leitura</h2><ul class="lista-editorial"><li><a href="/emitir-nfse-pelo-celular/">NFS-e pelo celular</a></li><li><a href="/nota-fiscal-mei-whatsapp/">NFS-e do MEI pelo WhatsApp</a></li><li><a href="/certificado-digital-nfse/">Certificado digital para NFS-e</a></li></ul></nav><section aria-labelledby="fontes"><h2 id="fontes">Fontes</h2><p>Fontes oficiais consultadas em <time datetime="2026-11-05">05/11/2026</time>. Funções do Spondeo conferidas no fluxo atual do produto.</p><ul class="lista-editorial"><li><a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual/guia-emissorpubliconacionalweb_snnfse-ern-v1-3.pdf" rel="external">Guia oficial do Emissor Web, versão 1.3</a></li><li><a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual/manual-contribuintes-emissor-publico-api-sistema-nacional-nfs-e-v1-2-out2025.pdf" rel="external">Manual oficial da API para contribuintes</a></li><li><a href="https://www.gov.br/iti/pt-br/assuntos/icp-brasil/certificado-digital" rel="external">ITI: certificados digitais</a></li></ul></section></div>
-<section class="chamada">
-<div class="largura chamada-conteudo">
-<div>
-<h2>Conheça o fluxo pelo WhatsApp</h2>
-<p>O Spondeo usa e-CNPJ A1 válido da empresa.</p>
-<p>Teste com 10 notas grátis, sem valor fiscal. Requer certificado e-CNPJ A1 válido da empresa.</p>
-</div>
-<a class="botao claro" href="https://app.spondeo.com.br/cadastro?origem=guia">Teste grátis: 10 notas sem valor fiscal<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div>
-</section>
+<section class="chamada revelar" id="comecar">
+    <div class="largura chamada-conteudo">
+      <div>
+        <h2>Mande um áudio. A nota sai.</h2>
+        <p>Veja a sua nota montada no WhatsApp, sem cadastro. Depois, teste com 10 notas grátis, sem cartão de crédito e sem valor fiscal. Requer o e-CNPJ A1 da empresa.</p>
+      </div>
+      <div class="acoes-contato">
+        <a class="botao claro" href="https://wa.me/5519920136839?text=Quero%20ver%20a%20demonstra%C3%A7%C3%A3o" data-link="demonstracao-whatsapp" target="_blank" rel="noopener">Mande um áudio e veja<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="botao claro" href="https://app.spondeo.com.br/cadastro?origem=guia" data-link="cadastro">Começar o teste grátis<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="rodape">
-<div class="largura">
-<img class="rodape-marca" src="/spondeo-logo.svg" alt="Spondeo" width="620" height="120">
-<div class="rodape-linha">
-<nav aria-label="Links úteis">
-<a href="/demonstracao/">Assistir à demonstração</a>
-<a href="/">Início</a>
-<a href="/#planos">Planos individuais</a>
-<a href="/nota-fiscal-whatsapp/">Nota pelo WhatsApp</a>
-<a href="/nfse-nacional-simples/">NFS-e nacional</a>
-<a href="/contabilidades/">Contabilidades</a>
-<a href="mailto:app.spondeo@gmail.com">app.spondeo@gmail.com</a>
-<a href="https://www.instagram.com/spondeo.app/">Instagram</a>
-<a href="https://www.facebook.com/people/Spondeo/61595872323313/">Facebook</a>
-<a href="https://app.spondeo.com.br/termos">Termos de uso</a>
-<a href="https://app.spondeo.com.br/privacidade">Privacidade</a>
-</nav>
-<small>© 2026 Spondeo</small>
-</div>
-</div>
+  <div class="largura">
+    <img class="rodape-marca" src="/spondeo-logo.svg" alt="Spondeo" width="620" height="120">
+    <div class="rodape-linha">
+      <nav aria-label="Links do site">
+        <a href="/">Início</a>
+        <a href="/#planos">Planos</a>
+        <a href="/demonstracao/">Assistir à demonstração</a>
+        <a href="/nota-fiscal-whatsapp/">Nota pelo WhatsApp</a>
+        <a href="/nfse-nacional-simples/">NFS-e nacional</a>
+        <a href="/nfse-nacional-simples/#guias">Guias</a>
+        <a href="/contabilidades/">Contabilidades</a>
+        <a href="mailto:app.spondeo@gmail.com">app.spondeo@gmail.com</a>
+        <a href="https://www.instagram.com/spondeo.app/">Instagram</a>
+        <a href="https://www.facebook.com/people/Spondeo/61595872323313/">Facebook</a>
+        <a href="https://app.spondeo.com.br/cancelamento">Cancelamento</a>
+        <a href="https://app.spondeo.com.br/termos" data-link="termos">Termos de uso</a>
+        <a href="https://app.spondeo.com.br/privacidade" data-link="privacidade">Privacidade</a>
+      </nav>
+      <small>© 2026 Spondeo</small>
+    </div>
+    <p class="nota-planos">Razão social: 69.817.804 RAFAEL ANTONIO STOLARSKI<br>CNPJ: 69.817.804/0001-84</p>
+  </div>
 </footer>
 <script src="/anima.js?v=5" defer></script>
 <script src="/carregamento.js?v=2" defer></script>
-<script src="/origem.js?v=20261105-guias" defer></script>
+<script src="/origem.js?v=3" defer></script>
 </body>
 </html>

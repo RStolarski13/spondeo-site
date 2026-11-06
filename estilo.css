@@ -758,3 +758,24 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
   .incluso .vantagens{grid-template-columns:1fr}
 }
 .incluso+.nota-planos{margin-top:24px}
+
+/* Certificado com uma oferta só (contabilidades): texto à esquerda, cartão à direita. */
+.cert-um{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:32px 64px;align-items:center}
+.cert-um .certificado-contexto{display:block}
+.cert-um .certificado-contexto p{margin-top:16px}
+.cert-um .certificado-ofertas{margin:0;grid-template-columns:1fr}
+@media(max-width:860px){.cert-um{grid-template-columns:1fr}}
+
+/* Transição entre páginas (Claude, 06/11/2026): navegação nativa do mesmo site com um
+   esmaecer curto, sem JS. Navegador sem suporte troca de página como antes. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:180ms cubic-bezier(0.23,1,0.32,1) both pagina-sai}
+::view-transition-new(root){animation:240ms cubic-bezier(0.23,1,0.32,1) both pagina-entra}
+@keyframes pagina-sai{to{opacity:0}}
+@keyframes pagina-entra{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+.topo nav a[aria-current="page"]{color:var(--sobre-marinho);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+/* Sem a cena (movimento reduzido), os passos voltam ao alinhamento do resto da página. */
+html:not(.js) .passos.largura{margin-inline:auto;padding-inline:24px}
+@media(max-width:480px){html:not(.js) .passos.largura{padding-inline:16px}}
+@media(max-width:480px){.chamada .acoes-contato{flex-direction:column;width:100%}.chamada .acoes-contato .botao{width:100%;justify-content:center}}

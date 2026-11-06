@@ -23,7 +23,8 @@
   const tela = innerWidth < 600 ? 'celular' : innerWidth < 1024 ? 'tablet' : 'computador';
   const veio = ['google', 'instagram', 'facebook', 'whatsapp'].includes(origem) ? origem : (origem ? 'outro' : 'direto');
   // Texto simples: pedido sem pré-verificação de CORS; o servidor só aceita o site do Spondeo.
-  if (pagina) fetch('https://app.spondeo.com.br/m', {method: 'POST', mode: 'no-cors', keepalive: true,
+  // Só o site publicado conta: cópia local, ensaio e testes não sujam o funil do admin.
+  if (pagina && location.hostname === 'spondeo.com.br') fetch('https://app.spondeo.com.br/m', {method: 'POST', mode: 'no-cors', keepalive: true,
     body: JSON.stringify({p: pagina, o: veio, t: tela})}).catch(() => {});
   if (!canais.has(origem)) return;
   const paginas = new Set(['/', '/contabilidades/', '/nota-fiscal-whatsapp/', '/nfse-nacional-simples/']);
