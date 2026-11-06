@@ -13,6 +13,8 @@
   for (let i = 0; i < 3; i++) esqueleto.append(document.createElement('i'));
   aviso.append(esqueleto);
   document.body.append(aviso);
+  // Endereços que devolvem arquivo (PDF, XML, CSV, ZIP): o navegador baixa e a página fica.
+  const ARQUIVO = /\/(arquivo|pdf|xml)$|\.(csv|zip|pdf|xml)$/;
   let inicio, limite;
   const limpar = () => {
     clearTimeout(inicio);
@@ -31,7 +33,7 @@
         evento.shiftKey || evento.altKey || link.hasAttribute('download') ||
         (link.target && link.target !== '_self') || link.hasAttribute('data-abrir')) return;  // popup, não navega
     const url = new URL(link.href);
-    if (url.origin !== location.origin ||
+    if (url.origin !== location.origin || ARQUIVO.test(url.pathname) ||
         (url.pathname === location.pathname && url.search === location.search)) return;
     // A decisão de outro handler de cancelar a navegação é respeitada.
     queueMicrotask(() => { if (!evento.defaultPrevented) aguardar(); });
@@ -44,7 +46,7 @@
     // Popup de confirmação ainda aberto (confirmar.js): só navega depois do "Sim".
     if (form.matches('[data-confirmar]:not([data-confirmado])')) return;
     if (botao?.hasAttribute('data-download') || form.method === 'dialog' || (target && target !== '_self') ||
-        destino.origin !== location.origin) return;
+        destino.origin !== location.origin || ARQUIVO.test(destino.pathname)) return;
     queueMicrotask(() => { if (!evento.defaultPrevented) aguardar(); });
   });
   window.addEventListener('pageshow', limpar);
