@@ -746,7 +746,8 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 
 /* Faixas do escritório (05/11/2026): a mesma anatomia dos planos (nome, faixa, preço, total,
    botão); o que é igual nas três faixas fica uma vez só, logo abaixo. */
-.planos.faixas{grid-template-columns:repeat(3,minmax(0,1fr))}
+.planos.faixas{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.planos.faixas .plano{padding:28px 22px 24px}
 .faixa{margin:6px 0 0;color:var(--suave);font-size:.95rem}
 .plano.destaque .faixa{color:var(--sobre-marinho-suave)}
 .faixas .por-dia{flex:1}
@@ -797,3 +798,4 @@ html:not(.js) .passos.largura{margin-inline:auto;padding-inline:24px}
   .topo nav a{flex:none;font-size:.95rem}
 }
 .plano.destaque{transform:none;margin-top:-12px}.escolha-ativa .plano.destaque:not(.indicado-agora){margin-top:0}
+@media(max-width:1100px) and (min-width:861px){.planos.faixas{grid-template-columns:repeat(2,minmax(0,1fr))}}
