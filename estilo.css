@@ -782,3 +782,4 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 html:not(.js) .passos.largura{margin-inline:auto;padding-inline:24px}
 @media(max-width:480px){html:not(.js) .passos.largura{padding-inline:16px}}
 @media(max-width:480px){.chamada .acoes-contato{flex-direction:column;width:100%}.chamada .acoes-contato .botao{width:100%;justify-content:center}}
+.painel-escritorio{margin-top:56px}
