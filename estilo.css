@@ -783,3 +783,17 @@ html:not(.js) .passos.largura{margin-inline:auto;padding-inline:24px}
 @media(max-width:480px){html:not(.js) .passos.largura{padding-inline:16px}}
 @media(max-width:480px){.chamada .acoes-contato{flex-direction:column;width:100%}.chamada .acoes-contato .botao{width:100%;justify-content:center}}
 .painel-escritorio{margin-top:56px}
+/* 7º teste leigo (07/11/2026): botões dos cartões de faixa alinhados; mini-painel do escritório
+   sem quebrar no celular; no celular, as seções do topo numa faixa que rola de lado. */
+.faixas .plano .por-dia{flex:1}
+.painel-escritorio .mini-lista li{gap:12px}
+.painel-escritorio .mini-lista li>span:first-child{min-width:0}
+.painel-escritorio .mini-lista .lado{flex-wrap:wrap;justify-content:flex-end;text-align:right}
+.nowrap{white-space:nowrap}
+@media(max-width:1000px){
+  .topo-linha{flex-wrap:wrap;row-gap:10px}
+  .topo nav{display:flex;order:3;width:100%;margin:0;gap:20px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  .topo nav::-webkit-scrollbar{display:none}
+  .topo nav a{flex:none;font-size:.95rem}
+}
+.plano.destaque{transform:none;margin-top:-12px}.escolha-ativa .plano.destaque:not(.indicado-agora){margin-top:0}
