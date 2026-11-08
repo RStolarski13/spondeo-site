@@ -799,3 +799,27 @@ html:not(.js) .passos.largura{margin-inline:auto;padding-inline:24px}
 }
 .plano.destaque{transform:none;margin-top:-12px}.escolha-ativa .plano.destaque:not(.indicado-agora){margin-top:0}
 @media(max-width:1100px) and (min-width:861px){.planos.faixas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Página de planos (08/11/2026): o tom da coluna sobe a cada degrau. */
+#planos:not(:has(#ciclo-a1:checked)) .so-a1,#planos:has(#ciclo-a1:checked) .so-mensal{display:none}
+.planos-publico{display:flex;gap:8px;margin:0 0 20px}
+.planos-publico a{padding:10px 16px;border-radius:999px;border:1px solid #d6dee6;color:#10283f;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;font-weight:600}
+.planos-publico a[aria-current]{background:#10283f;color:#fff;border-color:#10283f}
+.ciclo-tres{flex-wrap:wrap}
+#comparar{margin-top:56px}
+.escada-rolagem{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;border:1px solid #e3e9ef;background:#fff}
+.escada-rolagem:focus-visible{outline:3px solid #1f7a5c;outline-offset:2px}
+.escada{width:100%;min-width:640px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:.95rem}
+.escada th:first-child{width:38%}
+.escada th,.escada td{padding:13px 12px;text-align:center;border-bottom:1px solid #edf1f5}
+.escada tbody tr:last-child>*{border-bottom:0}
+.escada th:first-child{text-align:left;font-weight:500;position:sticky;left:0;background:#fff;max-width:210px;z-index:1;color:#10283f}
+.escada thead th{font-weight:700;color:#10283f}
+.escada thead th:first-child{font-weight:700}
+.escada .degrau-1{background:#fff}
+.escada .degrau-2{background:#f1f8f5}
+.escada .degrau-3{background:#dff0e9}
+.escada .degrau-4{background:#c9e6da}
+.escada td svg{width:18px;height:18px;fill:none;stroke:#176349;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.escada td.fora{color:#8493a1}
+@media (max-width:520px){.planos-publico a{flex:1;justify-content:center}.escada{min-width:520px}.escada th:first-child{width:140px;max-width:140px;font-size:.88rem}}
