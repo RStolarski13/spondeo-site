@@ -1,7 +1,7 @@
 /* Landing do Spondeo (Claude). Tokens da marca (docs/marca.md), os mesmos do painel.
    Abertura: o logo se desenha (1ª visita da sessão) e o vídeo do celular com a conversa toca ao lado.
    Os blocos [data-ui] imitam a interface real e têm bordas e sombras próprias. */
-@font-face{font-family:Figtree;src:url('figtree.ttf') format('truetype');font-weight:300 900;font-display:swap}
+@font-face{font-family:Figtree;src:url('figtree.woff2') format('woff2'),url('figtree.ttf') format('truetype');font-weight:300 900;font-display:swap}
 :root{
   --fundo:#f4f6f8;--fundo-forte:#e9eef2;--papel:#fff;--tinta:#10283f;--suave:#56687a;--borda:#e1e7ec;
   --azul:#1d4a70;--azul-escuro:#153a59;--verde:#0f766e;--verde-texto:#0b5c55;--verde-fundo:#e2f1ee;--verde-claro:#4fb8a8;
@@ -856,4 +856,12 @@ main:has(#publico-escritorio:checked) #planos,main:has(#publico-empresa:checked)
   .escada th,.escada td{border-bottom:0}
   .escada tbody th:first-child{grid-column:1 / -1;width:auto;padding:12px 12px 6px;border-top:1px solid var(--borda)}
   .escada td{padding:6px 2px 12px;font-size:.8rem;display:flex;align-items:center;justify-content:center;min-height:36px;overflow-wrap:anywhere}
+}
+
+/* Revisão Hallmark (cópia de teste, 08/11/2026). */
+html,body{overflow-x:clip}
+h1,h2{overflow-wrap:break-word;min-width:0}
+.teste-sem-cartao a{color:var(--verde-claro)}
+@media (max-width:860px){
+  .topo nav{flex-wrap:wrap;overflow-x:visible;row-gap:6px;-webkit-mask-image:none;mask-image:none;padding-bottom:0}
 }
