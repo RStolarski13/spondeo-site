@@ -800,26 +800,60 @@ html:not(.js) .passos.largura{margin-inline:auto;padding-inline:24px}
 .plano.destaque{transform:none;margin-top:-12px}.escolha-ativa .plano.destaque:not(.indicado-agora){margin-top:0}
 @media(max-width:1100px) and (min-width:861px){.planos.faixas{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-/* Página de planos (08/11/2026): o tom da coluna sobe a cada degrau. */
+/* Página de planos (08/11/2026): abas, três formas de pagar e a escada de vantagens. */
 #planos:not(:has(#ciclo-a1:checked)) .so-a1,#planos:has(#ciclo-a1:checked) .so-mensal{display:none}
-.planos-publico{display:flex;gap:8px;margin:0 0 20px}
-.planos-publico a{padding:10px 16px;border-radius:999px;border:1px solid #d6dee6;color:#10283f;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;font-weight:600}
-.planos-publico a[aria-current]{background:#10283f;color:#fff;border-color:#10283f}
-.ciclo-tres{flex-wrap:wrap}
+main:has(#publico-escritorio:checked) #planos,main:has(#publico-empresa:checked) #escritorios{display:none}
+.pagina-planos .planos-cabeca{padding-top:56px}
+.pagina-planos .secao{padding-block:28px 72px}
+.pagina-planos .planos-controles{margin-top:0}
+.planos-publico{display:inline-flex;gap:4px;margin:20px 0 0;padding:4px;border:0;border-radius:14px;background:var(--fundo-forte)}
+.planos-publico input,.ciclo-tres input{position:absolute;opacity:0;width:1px;height:1px}
+.planos-publico label{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 22px;border-radius:11px;font-weight:650;color:var(--suave);cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.planos-publico input:checked+label{background:var(--tinta);color:var(--papel)}
+.planos-publico input:focus-visible+label{outline:2px solid var(--verde);outline-offset:2px}
+.ciclo-tres{display:inline-grid;grid-template-columns:repeat(3,minmax(0,auto));border-radius:16px}
+.ciclo-tres label{justify-content:center;text-align:center;border-radius:13px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.pagina-planos .plano .faixa{min-height:2.9em}
 #comparar{margin-top:56px}
-.escada-rolagem{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;border:1px solid #e3e9ef;background:#fff}
-.escada-rolagem:focus-visible{outline:3px solid #1f7a5c;outline-offset:2px}
-.escada{width:100%;min-width:640px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:.95rem}
-.escada th:first-child{width:38%}
-.escada th,.escada td{padding:13px 12px;text-align:center;border-bottom:1px solid #edf1f5}
+.escada-rolagem{border-radius:16px;border:1px solid var(--borda);background:var(--papel);overflow:clip}
+.escada{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:.95rem}
+.escada th,.escada td{padding:13px 12px;text-align:center;border-bottom:1px solid var(--borda)}
 .escada tbody tr:last-child>*{border-bottom:0}
-.escada th:first-child{text-align:left;font-weight:500;position:sticky;left:0;background:#fff;max-width:210px;z-index:1;color:#10283f}
-.escada thead th{font-weight:700;color:#10283f}
-.escada thead th:first-child{font-weight:700}
-.escada .degrau-1{background:#fff}
-.escada .degrau-2{background:#f1f8f5}
-.escada .degrau-3{background:#dff0e9}
-.escada .degrau-4{background:#c9e6da}
-.escada td svg{width:18px;height:18px;fill:none;stroke:#176349;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
-.escada td.fora{color:#8493a1}
-@media (max-width:520px){.planos-publico a{flex:1;justify-content:center}.escada{min-width:520px}.escada th:first-child{width:140px;max-width:140px;font-size:.88rem}}
+.escada th:first-child{width:38%;text-align:left;font-weight:500;color:var(--tinta)}
+.escada thead th{font-weight:700;color:var(--tinta)}
+.escada thead th{position:sticky;top:72px;z-index:2;box-shadow:inset 0 -1px var(--borda)}
+.escada thead th:first-child{background:var(--papel)}
+.escada .degrau-2{background:color-mix(in srgb,var(--verde) 6%,var(--papel))}
+.escada .degrau-3{background:color-mix(in srgb,var(--verde) 14%,var(--papel))}
+.escada .degrau-4{background:color-mix(in srgb,var(--verde) 24%,var(--papel))}
+.escada td svg{width:18px;height:18px;fill:none;stroke:var(--verde);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.escada td.fora{color:var(--suave)}
+@media (max-width:860px){
+  .pagina-planos #planos .planos{display:grid;grid-template-columns:1fr;gap:14px;margin:20px 0 0;padding:0;overflow:visible;scroll-snap-type:none}
+  .pagina-planos #planos .plano{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px;padding:20px}
+  .pagina-planos #planos .plano h3,.pagina-planos #planos .plano .faixa,.pagina-planos #planos .plano .selo-plano{grid-column:1}
+  .pagina-planos #planos .plano .faixa{min-height:0;margin:2px 0 0}
+  .pagina-planos #planos .plano .selo-plano{position:static;justify-self:start;margin:0 0 8px;transform:none}
+  .pagina-planos #planos .plano .preco{grid-column:2;grid-row:1 / span 3;margin:0;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:baseline;max-width:150px;white-space:nowrap}
+  .pagina-planos #planos .plano .preco b{font-size:2rem}
+  .pagina-planos #planos .plano .preco .mes{flex-basis:100%;text-align:right;margin:0}
+  .pagina-planos #planos .plano .por-dia{grid-column:1 / -1;margin:10px 0 0}
+  .pagina-planos #planos .plano .assinar{grid-column:1 / -1;margin-top:14px}
+}
+@media (max-width:640px){
+  .pagina-planos .planos-cabeca{padding-top:32px}
+  .planos-publico,.ciclo-tres{display:grid;width:100%}
+  .planos-publico{grid-template-columns:1fr 1fr}
+  .planos-publico label{padding:8px}
+  .ciclo-tres{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
+  .ciclo-tres label{flex-direction:column;gap:2px;padding:8px 4px;font-size:.92rem;line-height:1.2}
+  .ciclo-tres .economia{font-size:.72rem;padding:0;background:none}
+  .escada,.escada tbody,.escada thead{display:block}
+  .escada tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .escada thead tr th:first-child{display:none}
+  .escada thead{position:sticky;top:104px;z-index:2;background:var(--papel)}
+  .escada thead th{position:static;padding:10px 2px;font-size:.74rem;overflow-wrap:anywhere}
+  .escada th,.escada td{border-bottom:0}
+  .escada tbody th:first-child{grid-column:1 / -1;width:auto;padding:12px 12px 6px;border-top:1px solid var(--borda)}
+  .escada td{padding:6px 2px 12px;font-size:.8rem;display:flex;align-items:center;justify-content:center;min-height:36px;overflow-wrap:anywhere}
+}
