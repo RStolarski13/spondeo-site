@@ -624,7 +624,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
   transition:background-color 200ms var(--ease-out),color 200ms var(--ease-out),box-shadow 200ms var(--ease-out)}
 .ciclo input:checked+label{background:var(--papel);color:var(--tinta);box-shadow:0 1px 3px var(--tinta-25)}
 .ciclo input:focus-visible+label{outline:2px solid var(--verde);outline-offset:2px}
-.economia{padding:2px 8px;border-radius:999px;background:var(--verde-fundo);color:var(--verde-texto);font-size:.78rem;font-weight:700}
+.economia{white-space:nowrap;padding:2px 8px;border-radius:999px;background:var(--verde-fundo);color:var(--verde-texto);font-size:.78rem;font-weight:700}
 #planos:not(:has(#ciclo-anual:checked)) .so-anual,#planos:has(#ciclo-anual:checked) .so-mensal{display:none}
 .restricao{margin:6px 0 0;color:var(--verde-texto);font-size:.85rem;font-weight:650}
 .preco{margin-bottom:4px}
