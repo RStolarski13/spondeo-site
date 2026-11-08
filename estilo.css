@@ -865,3 +865,4 @@ h1,h2{overflow-wrap:break-word;min-width:0}
 @media (max-width:860px){
   .topo nav{flex-wrap:wrap;overflow-x:visible;row-gap:6px;-webkit-mask-image:none;mask-image:none;padding-bottom:0}
 }
+.plano.indicado-agora .selo-plano{display:none}

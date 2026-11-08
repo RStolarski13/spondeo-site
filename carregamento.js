@@ -47,7 +47,7 @@
     if (form.matches('[data-confirmar]:not([data-confirmado])')) return;
     if (botao?.hasAttribute('data-download') || form.method === 'dialog' || (target && target !== '_self') ||
         destino.origin !== location.origin || ARQUIVO.test(destino.pathname)) return;
-    queueMicrotask(() => { if (!evento.defaultPrevented) aguardar(); });
+    queueMicrotask(() => { if (!evento.defaultPrevented) { texto.textContent = 'Aguarde…'; aguardar(); } });
   });
   window.addEventListener('pageshow', limpar);
   window.addEventListener('pagehide', limpar);

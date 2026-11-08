@@ -27,7 +27,7 @@
   if (pagina && location.hostname === 'spondeo.com.br') fetch('https://app.spondeo.com.br/m', {method: 'POST', mode: 'no-cors', keepalive: true,
     body: JSON.stringify({p: pagina, o: veio, t: tela})}).catch(() => {});
   if (!canais.has(origem)) return;
-  const paginas = new Set(['/', '/contabilidades/', '/nota-fiscal-whatsapp/', '/nfse-nacional-simples/']);
+  const paginas = new Set(['/', '/contabilidades/', '/nota-fiscal-whatsapp/', '/nfse-nacional-simples/', '/planos/']);
   document.querySelectorAll('a[href]').forEach(link => {
     if (link.getAttribute('href').startsWith('#')) return;
     const url = new URL(link.href);
