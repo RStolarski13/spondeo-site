@@ -41,3 +41,11 @@
     }
   });
 })();
+
+// /planos/?publico=escritorio já abre na aba do escritório.
+if (new URLSearchParams(location.search).get('publico') === 'escritorio') {
+  addEventListener('DOMContentLoaded', () => {
+    const aba = document.getElementById('publico-escritorio');
+    if (aba) aba.checked = true;
+  });
+}
