@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Demonstração ilustrativa de nota de serviço pelo WhatsApp no Spondeo">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/estilo.css?v=20261108-e">
+<link rel="stylesheet" href="/estilo.css?v=20261110-e">
 <script src="/abertura.js?v=1"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://spondeo.com.br/#site", "name": "Spondeo", "url": "https://spondeo.com.br/", "publisher": {"@id": "https://spondeo.com.br/#organizacao"}}, {"@type": "Organization", "@id": "https://spondeo.com.br/#organizacao", "name": "Spondeo", "url": "https://spondeo.com.br/", "logo": "https://spondeo.com.br/spondeo-logo.svg", "sameAs": ["https://www.instagram.com/spondeo.app/", "https://www.facebook.com/people/Spondeo/61595872323313/"]}]}</script>
 <!-- Site estático no GitHub Pages. Identidade compartilhada com o produto. -->
@@ -35,12 +35,9 @@
     <a class="marca" href="#"><img src="/spondeo-logo-negativo.svg" alt="Spondeo" width="155" height="30"></a>
     <nav aria-label="Seções">
       <a href="#como-funciona">Como funciona</a>
-      <a href="#painel">Painel</a>
       <a href="/planos/">Planos</a>
-      <a href="#certificados">Certificados</a>
-      <a href="#seguranca">Segurança</a>
       <a href="#perguntas">Perguntas</a>
-      <a href="/contabilidades/">Contabilidades</a>
+      <a class="para-contador" href="/contabilidades/">Para contabilidades</a>
     </nav>
     <a class="entrar" href="https://app.spondeo.com.br/entrar" data-link="painel">Entrar</a>
     <a class="topo-cta" href="https://app.spondeo.com.br/cadastro" data-link="cadastro">Teste grátis</a>
@@ -295,21 +292,7 @@
     </div>
     </div>
 
-    <ul class="planos">
-      <li class="plano" id="plano-mei"><p class="indicado" aria-hidden="true">Indicado</p>
-        <p class="selo-plano selo-mei">Só para MEI</p><h3>MEI</h3>
-        <p class="preco so-mensal"><span class="moeda">R$</span><b>24</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-        <p class="por-dia so-mensal">menos de R$ 1 por dia</p>
-        <p class="preco so-anual"><span class="moeda">R$</span><b>20</b><span class="centavos">,75</span><span class="mes">por mês</span></p>
-        <p class="por-dia so-anual">R$ 249 à vista por 12 meses</p>
-        <ul class="vantagens">
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Até 3 clientes</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Notas e Pix pelo WhatsApp</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>PDF e XML na conversa</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Cancelar e corrigir notas</li>
-        </ul>
-        <a class="botao assinar so-mensal" href="https://app.spondeo.com.br/assinar/mei" data-link="assinar-mei">Assinar<span class="oculto"> o MEI</span><svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="botao assinar so-anual" href="https://app.spondeo.com.br/assinar/mei_anual" data-link="assinar-mei-anual">Assinar<span class="oculto"> o MEI anual</span><svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+    <ul class="planos planos-tres">
       <li class="plano" id="plano-essencial"><p class="indicado" aria-hidden="true">Indicado</p>
         <h3>Essencial</h3>
         <p class="preco so-mensal"><span class="moeda">R$</span><b>49</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
@@ -321,11 +304,10 @@
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Notas e Pix pelo WhatsApp</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>PDF e XML na conversa</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Cancelar e corrigir notas</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Certificado protegido</li>
         </ul>
         <a class="botao assinar so-mensal" href="https://app.spondeo.com.br/assinar/essencial" data-link="assinar-essencial">Assinar<span class="oculto"> o Essencial</span><svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="botao assinar so-anual" href="https://app.spondeo.com.br/assinar/essencial_anual" data-link="assinar-essencial-anual">Assinar<span class="oculto"> o Essencial anual</span><svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-      <li class="plano destaque" id="plano-profissional"><p class="selo-plano">Mais assinado</p><p class="indicado" aria-hidden="true">Indicado</p>
+      <li class="plano destaque" id="plano-profissional"><p class="indicado" aria-hidden="true">Indicado</p>
         <h3>Profissional</h3>
         <p class="preco so-mensal"><span class="moeda">R$</span><b>69</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
         <p class="por-dia so-mensal">menos de R$ 2,50 por dia</p>
@@ -334,8 +316,7 @@
         <ul class="vantagens">
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Até 40 clientes</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo do Essencial</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Painel de notas</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Gestão de clientes e serviços</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Painel com notas, clientes e serviços</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Planilha para o contador</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Até 50 notas de uma vez (lote)</li>
         </ul>
@@ -350,27 +331,28 @@
         <ul class="vantagens">
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Clientes sem limite</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo do Profissional</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Faturamento e gráficos</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Relatórios em PDF e lote sem limite do plano</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Faturamento, gráficos e relatórios em PDF</li>
           <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Atendimento prioritário</li>
         </ul>
         <a class="botao assinar so-mensal" href="https://app.spondeo.com.br/assinar/completo" data-link="assinar-completo">Assinar<span class="oculto"> o Completo</span><svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="botao assinar so-anual" href="https://app.spondeo.com.br/assinar/completo_anual" data-link="assinar-completo-anual">Assinar<span class="oculto"> o Completo anual</span><svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
     </ul>
     <p class="deslize" aria-hidden="true">Deslize para ver os outros planos</p>
-    <p class="teste-gratis"><a href="/planos/#comparar" data-link="comparar-planos">Comparar todos os planos</a></p>
-    <p class="teste-gratis">Prefere testar antes? <a href="https://app.spondeo.com.br/cadastro" data-link="cadastro">Comece com 10 notas grátis</a>, sem cartão de crédito. Notas de teste, sem valor fiscal.</p>
-    <p class="nota-planos">Várias notas de uma vez: até 50 por envio no WhatsApp e até 200 linhas por planilha no painel. Emitimos no padrão nacional da nota de serviço; conferimos a sua cidade no cadastro.</p>
+    <p class="teste-gratis">É MEI? O plano MEI atende até 3 clientes por <span class="so-mensal">R$&nbsp;24,90 ao mês</span><span class="so-anual">R$&nbsp;249 ao ano</span>. <a class="so-mensal" href="https://app.spondeo.com.br/assinar/mei" data-link="assinar-mei">Assinar o MEI</a><a class="so-anual" href="https://app.spondeo.com.br/assinar/mei_anual" data-link="assinar-mei-anual">Assinar o MEI anual</a></p>
+    <p class="teste-gratis">Prefere testar antes? <a href="https://app.spondeo.com.br/cadastro" data-link="cadastro">Comece com 10 notas grátis</a>, sem cartão: notas de demonstração, sem certificado e sem valor fiscal. <a href="/planos/#comparar" data-link="comparar-planos">Comparar todos os planos</a></p>
   </section>
 
-  <section class="secao largura revelar" id="contabilidades">
-    <h2>Para escritórios de contabilidade</h2>
-    <p class="planos-intro">O escritório emite pelas empresas da carteira, no painel ou no WhatsApp. Com a procuração eletrônica, basta o certificado do escritório. Mais empresas, menor valor por CNPJ.</p>
-
-<p class="planos-intro">De R$&nbsp;39,90 a R$&nbsp;19,90 por empresa ao mês, conforme o tamanho da carteira. Clientes sem limite.</p>
-    <p><a class="botao assinar" href="/contabilidades/">Ver planos para escritórios</a></p>
+  <section class="faixa-escura revelar" id="contabilidades">
+    <div class="largura seguranca-grade">
+      <h2>Para escritórios de contabilidade</h2>
+      <dl class="pontos">
+        <div><dt><span class="ponto-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path pathLength="1" d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path pathLength="1" d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path pathLength="1" d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg></span>A carteira num painel só</dt><dd>O escritório emite pelas empresas da carteira, no painel ou no WhatsApp.</dd></div>
+        <div><dt><span class="ponto-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path pathLength="1" d="M19 10v2a7 7 0 0 1-14 0v-2"/><path pathLength="1" d="M12 19v3"/></svg></span>Peça a nota por áudio</dt><dd>No WhatsApp, diga a empresa, o cliente e o valor. O robô monta a nota e espera o seu Confirmar.</dd></div>
+        <div><dt><span class="ponto-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="m22 17-8.5-8.5-5 5L2 7"/><path pathLength="1" d="M16 17h6v-6"/></svg></span>De R$&nbsp;39,90 a R$&nbsp;19,90 por empresa</dt><dd>Ao mês, conforme o tamanho da carteira. Clientes sem limite.</dd></div>
+      </dl>
+      <p><a class="botao claro" href="/contabilidades/">Ver planos para escritórios<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    </div>
   </section>
-
 
   <section class="secao largura revelar" id="para-quem">
     <h2>Para quem presta serviço</h2>

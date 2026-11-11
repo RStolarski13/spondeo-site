@@ -866,3 +866,8 @@ h1,h2{overflow-wrap:break-word;min-width:0}
   .topo nav{flex-wrap:wrap;overflow-x:visible;row-gap:6px;-webkit-mask-image:none;mask-image:none;padding-bottom:0}
 }
 .plano.indicado-agora .selo-plano{display:none}
+/* Revisão de 10/11/2026: home com três planos e contabilidades em destaque no menu */
+.planos.planos-tres{grid-template-columns:repeat(3,minmax(0,1fr))}
+.topo nav a.para-contador{color:var(--verde-claro);font-weight:650}
+/* No celular o menu cabe numa linha: Perguntas fica no rodapé da página */
+@media(max-width:480px){.topo nav a[href$="#perguntas"]{display:none}}
