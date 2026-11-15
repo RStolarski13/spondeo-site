@@ -242,9 +242,10 @@ details p{margin:0;padding:0 24px 22px}
 .abertura-contabilidade h1{max-width:20ch}
 .acoes-contato{display:flex;flex-wrap:wrap;gap:12px}
 .preco .consulta{font-size:2rem;line-height:1.55}
-.requisito-a1{margin-top:24px;padding:20px 24px;border:1px solid var(--borda);background:var(--aviso-fundo);border-radius:12px}
+.requisito-a1{margin-top:24px;max-width:84ch;padding:20px 24px;border:1px solid var(--borda);background:var(--aviso-fundo);border-radius:12px}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
-.requisito-a1 p{margin:0;max-width:80ch}
+.requisito-a1 p{margin:0;text-wrap:pretty}
+.requisito-a1 p+p{margin-top:10px}
 .requisito-a1 a{color:var(--azul);text-decoration:underline}
 .escolha{margin-top:36px;max-width:560px;display:grid;gap:10px}
 .escolha[hidden]{display:none}
