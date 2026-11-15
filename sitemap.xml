@@ -9,8 +9,9 @@
     <video:video>
       <video:thumbnail_loc>https://spondeo.com.br/demonstracao.jpg</video:thumbnail_loc>
       <video:title>Spondeo: veja a emissão de NFS-e pelo WhatsApp</video:title>
-      <video:description>Demonstração de 24 segundos: pedido, conferência e confirmação. Dados fictícios, sem valor fiscal.</video:description>
+      <video:description>Demonstração de 27 segundos: pedido, conferência e confirmação. Dados fictícios, sem valor fiscal.</video:description>
       <video:content_loc>https://spondeo.com.br/como-funciona.mp4</video:content_loc>
+      <video:duration>27</video:duration>
     </video:video>
   </url>
   <url><loc>https://spondeo.com.br/emissor-nacional-obrigatorio-simples/</loc><lastmod>2026-11-05</lastmod></url>
