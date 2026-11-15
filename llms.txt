@@ -1,0 +1,23 @@
+# Spondeo
+
+> Spondeo emite NFS-e (nota fiscal de serviço, padrão nacional) pelo WhatsApp para pequenos prestadores de serviço do Simples Nacional e MEI: a pessoa manda texto, áudio, foto ou PDF, confere o resumo e confirma; o Spondeo emite a nota e gera o Pix na chave da empresa. Também há painel para escritórios de contabilidade, que preparam e confirmam as notas da carteira.
+
+Pontos importantes:
+- A IA nunca emite sozinha: valor, cliente e serviço são sempre confirmados por quem usa.
+- Para emitir de verdade é preciso o certificado digital e-CNPJ A1 da empresa (ou do escritório, com procuração). Para testar, há 10 notas de demonstração sem valor fiscal.
+- Atendimento só em português do Brasil.
+
+## Guias
+- [Como emitir nota fiscal de serviço pelo WhatsApp](https://spondeo.com.br/nota-fiscal-whatsapp/)
+- [NFS-e nacional para empresas do Simples em 2026](https://spondeo.com.br/nfse-nacional-simples/)
+- [Emissor Nacional obrigatório para o Simples](https://spondeo.com.br/emissor-nacional-obrigatorio-simples/)
+- [Como emitir NFS-e nacional pelo celular](https://spondeo.com.br/emitir-nfse-pelo-celular/)
+- [Erros do Emissor Nacional: significado e correção](https://spondeo.com.br/erros-emissor-nacional/)
+- [MEI: nota fiscal de serviço pelo WhatsApp](https://spondeo.com.br/nota-fiscal-mei-whatsapp/)
+- [Certificado digital para emitir NFS-e](https://spondeo.com.br/certificado-digital-nfse/)
+- [Emitir nota depois de um atendimento na rua](https://spondeo.com.br/nfse-prestador-de-servico-na-rua/)
+
+## Produto
+- [Planos e preços](https://spondeo.com.br/planos/)
+- [Para contabilidades](https://spondeo.com.br/contabilidades/)
+- [Demonstração em vídeo](https://spondeo.com.br/demonstracao/)

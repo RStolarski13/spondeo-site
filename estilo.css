@@ -167,6 +167,8 @@ details p{margin:0;padding:0 24px 22px}
 .chamada-conteudo{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-block:88px}
 .chamada h2{color:var(--sobre-marinho);margin:0}
 .chamada p{color:var(--sobre-verde);margin:10px 0 0}
+.chamada p a{color:inherit;font-weight:650;text-decoration:underline;text-underline-offset:3px}
+.chamada p a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:3px}
 
 /* Rodapé: o nome volta grande, para fechar a página */
 .rodape{padding-block:72px 40px}
