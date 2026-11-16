@@ -244,7 +244,7 @@ details p{margin:0;padding:0 24px 22px}
 .abertura-contabilidade h1{max-width:20ch}
 .acoes-contato{display:flex;flex-wrap:wrap;gap:12px}
 .preco .consulta{font-size:2rem;line-height:1.55}
-.requisito-a1{margin-top:24px;max-width:84ch;padding:20px 24px;border:1px solid var(--borda);background:var(--aviso-fundo);border-radius:12px}
+.requisito-a1{margin-top:40px;max-width:84ch;padding-top:24px;border-top:1px solid var(--borda)}
 .requisito-a1 h3{margin:0 0 8px;font-size:1.1rem}
 .requisito-a1 p{margin:0;text-wrap:pretty}
 .requisito-a1 p+p{margin-top:10px}
@@ -877,8 +877,4 @@ h1,h2{overflow-wrap:break-word;min-width:0}
 @media(max-width:480px){.topo nav a[href$="#perguntas"]{display:none}}
 .faixas .anual{display:flex;flex-direction:column;gap:2px;margin-top:14px;padding-top:12px;border-top:1px solid var(--borda)}
 .faixas .anual span{color:var(--suave);font-size:.9rem}
-.como-calcula{margin-top:28px;padding:22px 24px;border:1px solid var(--borda);border-radius:16px;background:var(--papel)}
-.como-calcula h3{margin:0 0 8px;font-size:1.05rem}
-.como-calcula p{margin:8px 0 0;max-width:72ch;color:var(--suave);font-size:.95rem}
-.planos-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:24px}
 .plano.destaque .anual span{color:var(--sobre-marinho-suave)}
