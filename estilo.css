@@ -750,8 +750,10 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 
 /* Faixas do escritório (05/11/2026): a mesma anatomia dos planos (nome, faixa, preço, total,
    botão); o que é igual nas três faixas fica uma vez só, logo abaixo. */
-.planos.faixas{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.planos.faixas .plano{padding:28px 22px 24px}
+.planos.faixas{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media(max-width:1239px) and (min-width:861px){.planos.faixas{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:24px}}
+.planos.faixas .plano{padding:28px 18px 24px}
+@media(min-width:1240px){.planos.faixas .preco b{font-size:2.3rem;letter-spacing:-.5px}.planos.faixas .preco .mes{flex-basis:100%;margin:4px 0 0}}
 .faixa{margin:6px 0 0;color:var(--suave);font-size:.95rem}
 .plano.destaque .faixa{color:var(--sobre-marinho-suave)}
 .faixas .por-dia{flex:1}
@@ -878,3 +880,8 @@ h1,h2{overflow-wrap:break-word;min-width:0}
 .faixas .anual{display:flex;flex-direction:column;gap:2px;margin-top:14px;padding-top:12px;border-top:1px solid var(--borda)}
 .faixas .anual span{color:var(--suave);font-size:.9rem}
 .plano.destaque .anual span{color:var(--sobre-marinho-suave)}
+/* O anual é um valor alto: informação discreta, sem peso de preço (Rafael, 16/11/2026). */
+.faixas .anual{margin-top:10px;padding-top:10px;border-top-color:transparent;gap:0}
+.faixas .anual strong{font-weight:500;font-size:.82rem;color:var(--suave)}
+.faixas .anual span{font-size:.78rem;opacity:.85}
+.plano.destaque .anual strong{color:var(--sobre-marinho-suave)}
