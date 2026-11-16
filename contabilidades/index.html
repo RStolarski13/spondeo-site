@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="Demonstração ilustrativa de nota de serviço pelo WhatsApp no Spondeo">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/estilo.css?v=20261116-d">
+<link rel="stylesheet" href="/estilo.css?v=20261116-g">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://spondeo.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Para contabilidades", "item": "https://spondeo.com.br/contabilidades/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Posso mandar a planilha pelo WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Use o modelo do painel e envie CSV ou Excel (.xlsx), com os dados na primeira aba. Confira a empresa e cada nota no resumo e confirme o lote. Pelo WhatsApp, até 50 notas por envio. O painel também aceita Excel."}}, {"@type": "Question", "name": "Consigo acompanhar notas emitidas fora do Spondeo?", "acceptedAnswer": {"@type": "Answer", "text": "As notas emitidas por outros sistemas no padrão nacional podem ser consultadas no painel. Diferenças de código do serviço ou imposto aparecem para conferência com o escritório."}}, {"@type": "Question", "name": "O escritório pode instalar o painel no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Adicione o Spondeo à tela inicial e ative as notificações no aparelho compatível. O acesso e as permissões da equipe continuam individuais."}}]}</script>
 <link rel="preload" href="/figtree.woff2" as="font" type="font/woff2" crossorigin>
@@ -63,67 +63,35 @@
 <h2>Escolha o pacote da sua carteira.</h2>
 <p class="planos-intro">Uma assinatura para o escritório, com preço fechado por pacote: sem conta por empresa e sem surpresa na fatura.</p>
 
-<ul class="planos faixas">
-  <li class="plano">
-    <h3>Até 5 empresas</h3>
-    <p class="preco"><span class="moeda">R$</span><b>189</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-    <p class="por-dia">1 a 5 empresas · cerca de R$&nbsp;38 por empresa</p>
-    <ul class="vantagens">
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo para emitir a carteira</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>WhatsApp que entende texto, áudio, foto e PDF</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Notas e clientes sem limite</li>
-      <li class="fora"><span aria-hidden="true">–</span>Sem assistente de IA</li>
-    </ul>
-    <p class="por-dia anual"><strong>Anual: R$&nbsp;1.899,00 à vista</strong><span>pague 10 meses e use 12</span></p>
+<ul class="pacotes">
+  <li class="pacote">
+    <div class="pacote-nome"><h3>Até 5 empresas</h3><p>1 a 5 empresas<br>cerca de R$&nbsp;38 por empresa</p></div>
+    <p class="pacote-ia">Sem assistente de IA</p>
+    <div class="pacote-preco"><p class="preco"><span class="moeda">R$</span><b>189</b><span class="centavos">,90</span><span class="mes">por mês</span></p><p class="anual">ou R$&nbsp;1.899,00 por ano (10 meses)</p></div>
     <a class="botao assinar" href="https://app.spondeo.com.br/contador/cadastro" aria-label="Contratar o pacote de até 5 empresas">Contratar<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </li>
-  <li class="plano">
-    <h3>Até 10 empresas</h3>
-    <p class="preco"><span class="moeda">R$</span><b>329</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-    <p class="por-dia">6 a 10 empresas · cerca de R$&nbsp;33 por empresa</p>
-    <ul class="vantagens">
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo do pacote de até 5</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Assistente de IA: tira dúvidas fiscais, conversa sobre a sua carteira e lembra das últimas trocas</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Monta relatórios e planilhas por pedido</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Atendimento prioritário</li>
-    </ul>
-    <p class="por-dia anual"><strong>Anual: R$&nbsp;3.299,00 à vista</strong><span>pague 10 meses e use 12</span></p>
+  <li class="pacote">
+    <div class="pacote-nome"><h3>Até 10 empresas</h3><p>6 a 10 empresas<br>cerca de R$&nbsp;33 por empresa</p></div>
+    <p class="pacote-ia">Assistente de IA e atendimento prioritário</p>
+    <div class="pacote-preco"><p class="preco"><span class="moeda">R$</span><b>329</b><span class="centavos">,90</span><span class="mes">por mês</span></p><p class="anual">ou R$&nbsp;3.299,00 por ano (10 meses)</p></div>
     <a class="botao assinar" href="https://app.spondeo.com.br/contador/cadastro" aria-label="Contratar o pacote de até 10 empresas">Contratar<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </li>
-  <li class="plano">
-    <h3>Até 15 empresas</h3>
-    <p class="preco"><span class="moeda">R$</span><b>449</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-    <p class="por-dia">11 a 15 empresas · cerca de R$&nbsp;30 por empresa</p>
-    <ul class="vantagens">
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo do pacote de até 10, com o assistente de IA</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Para carteiras um pouco maiores, sem pagar o pacote de 25</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Atendimento prioritário</li>
-    </ul>
-    <p class="por-dia anual"><strong>Anual: R$&nbsp;4.499,00 à vista</strong><span>pague 10 meses e use 12</span></p>
+  <li class="pacote">
+    <div class="pacote-nome"><h3>Até 15 empresas</h3><p>11 a 15 empresas<br>cerca de R$&nbsp;30 por empresa</p></div>
+    <p class="pacote-ia">Assistente de IA e atendimento prioritário</p>
+    <div class="pacote-preco"><p class="preco"><span class="moeda">R$</span><b>449</b><span class="centavos">,90</span><span class="mes">por mês</span></p><p class="anual">ou R$&nbsp;4.499,00 por ano (10 meses)</p></div>
     <a class="botao assinar" href="https://app.spondeo.com.br/contador/cadastro" aria-label="Contratar o pacote de até 15 empresas">Contratar<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </li>
-  <li class="plano destaque">
-    <h3>Até 25 empresas</h3>
-    <p class="preco"><span class="moeda">R$</span><b>699</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-    <p class="por-dia">16 a 25 empresas · cerca de R$&nbsp;28 por empresa</p>
-    <ul class="vantagens">
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo do pacote de até 15</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Assistente de IA PRO: mais liberdade, análises mais profundas e mais perguntas por dia</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Menor valor por empresa</li>
-    </ul>
-    <p class="por-dia anual"><strong>Anual: R$&nbsp;6.999,00 à vista</strong><span>pague 10 meses e use 12</span></p>
+  <li class="pacote">
+    <div class="pacote-nome"><h3>Até 25 empresas</h3><p>16 a 25 empresas<br>cerca de R$&nbsp;28 por empresa</p></div>
+    <p class="pacote-ia">Assistente de IA PRO: mais liberdade e análises mais profundas</p>
+    <div class="pacote-preco"><p class="preco"><span class="moeda">R$</span><b>699</b><span class="centavos">,90</span><span class="mes">por mês</span></p><p class="anual">ou R$&nbsp;6.999,00 por ano (10 meses)</p></div>
     <a class="botao assinar" href="https://app.spondeo.com.br/contador/cadastro" aria-label="Contratar o pacote de até 25 empresas">Contratar<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </li>
-  <li class="plano">
-    <h3>Até 50 empresas</h3>
-    <p class="preco"><span class="moeda">R$</span><b>1.199</b><span class="centavos">,90</span><span class="mes">por mês</span></p>
-    <p class="por-dia">26 a 50 empresas · cerca de R$&nbsp;24 por empresa</p>
-    <ul class="vantagens">
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Tudo do pacote de até 25, com o assistente PRO</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>O menor valor por empresa da tabela</li>
-      <li><svg viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M4 10.5l4 4 8-9"/></svg>Acima de 50: proposta sob medida</li>
-    </ul>
-    <p class="por-dia anual"><strong>Anual: R$&nbsp;11.999,00 à vista</strong><span>pague 10 meses e use 12</span></p>
+  <li class="pacote">
+    <div class="pacote-nome"><h3>Até 50 empresas</h3><p>26 a 50 empresas<br>cerca de R$&nbsp;24 por empresa</p></div>
+    <p class="pacote-ia">Assistente de IA PRO e o menor valor por empresa</p>
+    <div class="pacote-preco"><p class="preco"><span class="moeda">R$</span><b>1.199</b><span class="centavos">,90</span><span class="mes">por mês</span></p><p class="anual">ou R$&nbsp;11.999,00 por ano (10 meses)</p></div>
     <a class="botao assinar" href="https://app.spondeo.com.br/contador/cadastro" aria-label="Contratar o pacote de até 50 empresas">Contratar<svg class="ic" data-ic="seguir" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </li>
 </ul>

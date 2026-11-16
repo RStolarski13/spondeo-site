@@ -885,3 +885,21 @@ h1,h2{overflow-wrap:break-word;min-width:0}
 .faixas .anual strong{font-weight:500;font-size:.82rem;color:var(--suave)}
 .faixas .anual span{font-size:.78rem;opacity:.85}
 .plano.destaque .anual strong{color:var(--sobre-marinho-suave)}
+
+/* Pacotes do escritório (Rafael, 16/11/2026): uma linha por pacote, mesma anatomia em todas;
+   só o que muda entre eles (empresas, assistente, preço) aparece. */
+.pacotes{list-style:none;margin:40px 0 0;padding:0;border-bottom:1px solid var(--borda)}
+.pacote{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1.3fr) minmax(0,1.4fr) auto;align-items:center;gap:8px 28px;padding:22px 16px;border-top:1px solid var(--borda)}
+.pacote h3{margin:0;font-size:1.15rem}
+.pacote-nome p,.pacote .anual{margin:4px 0 0;font-size:.88rem;color:var(--suave)}
+.pacote-ia{margin:0;font-size:.95rem;color:var(--tinta)}
+.pacote .preco{margin:0}
+.pacote .preco b{font-size:1.9rem;letter-spacing:-.5px}
+.pacote .preco .moeda{font-size:.95rem}
+.pacote .preco .centavos{font-size:1rem}
+.pacote .botao{white-space:nowrap;min-height:46px;padding:10px 22px;background:transparent;color:var(--verde-texto);box-shadow:inset 0 0 0 1.5px var(--verde);transition:background-color .15s ease-out}
+@media(hover:hover) and (pointer:fine){.pacote .botao:hover{background:var(--verde-fundo)}}
+@media(max-width:860px){
+  .pacote{grid-template-columns:1fr;padding:20px 16px;gap:10px}
+  .pacote .botao{justify-self:stretch;margin-top:6px}
+}
