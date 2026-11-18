@@ -16,6 +16,7 @@ Pontos importantes:
 - [MEI: nota fiscal de serviço pelo WhatsApp](https://spondeo.com.br/nota-fiscal-mei-whatsapp/)
 - [Certificado digital para emitir NFS-e](https://spondeo.com.br/certificado-digital-nfse/)
 - [Emitir nota depois de um atendimento na rua](https://spondeo.com.br/nfse-prestador-de-servico-na-rua/)
+- [Preciso entregar a DeRE? Quem entra e quem está dispensado](https://spondeo.com.br/dere-quem-precisa-entregar/)
 
 ## Produto
 - [Planos e preços](https://spondeo.com.br/planos/)
