@@ -4,7 +4,7 @@
 
 Pontos importantes:
 - A IA nunca emite sozinha: valor, cliente e serviço são sempre confirmados por quem usa.
-- Para emitir de verdade é preciso o certificado digital e-CNPJ A1 da empresa (ou do escritório, com procuração). Para testar, há 10 notas de demonstração sem valor fiscal.
+- Para emitir de verdade é preciso o certificado digital e-CNPJ A1 da empresa (ou do escritório, com procuração). Para testar, há 10 notas de demonstração sem valor fiscal e, com o e-CNPJ A1 enviado, 3 notas com valor fiscal.
 - Atendimento só em português do Brasil.
 
 ## Guias
