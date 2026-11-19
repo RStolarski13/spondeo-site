@@ -33,7 +33,7 @@ p{margin:12px 0;max-width:62ch}
 .topo{position:sticky;top:0;z-index:5;background:var(--tinta)}
 .topo-linha{display:flex;align-items:center;gap:28px;padding-block:16px}
 .marca img{display:block;height:28px;width:auto}
-.topo nav{display:flex;gap:26px;margin-left:auto}
+.topo nav{display:flex;gap:24px;margin-left:auto}
 .topo nav a,.entrar{color:var(--sobre-marinho-texto);text-decoration:none;font-weight:600;font-size:1rem}
 .topo nav a{background:linear-gradient(var(--verde-claro),var(--verde-claro)) 0 100%/0 2px no-repeat;padding-bottom:2px;transition:background-size 250ms var(--ease-out),color 150ms ease} /* taste-skill-ignore: é o traço do sublinhado, cor única, não um degradê */
 .entrar{padding:9px 18px;border-radius:999px;background:var(--marinho-botao);transition:transform 160ms var(--ease-out),background-color 150ms ease}
@@ -79,13 +79,13 @@ p{margin:12px 0;max-width:62ch}
 .msg::before{content:"";position:absolute;top:0;left:-7px;width:8px;height:12px;background:inherit;clip-path:polygon(100% 0,0 0,100% 100%)}
 .msg.minha{align-self:flex-end;background:var(--balao-meu);border-radius:10px 2px 10px 10px;transform-origin:100% 100%;margin-top:4px}
 .msg.minha::before{left:auto;right:-7px;clip-path:polygon(0 0,100% 0,0 100%)}
-.msg time{float:right;display:inline-flex;align-items:center;gap:3px;margin:7px 0 -4px 12px;font-size:.68rem;color:var(--chat-hora)}
+.msg time{float:right;display:inline-flex;align-items:center;gap:4px;margin:8px 0 -4px 12px;font-size:.68rem;color:var(--chat-hora)}
 .tiques{width:16px;height:11px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 11'%3E%3Cpath d='M1 6l3 3 6-7M6 8.5l1 .5 6-7' fill='none' stroke='%2353bdeb' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center}
 .respostas{display:grid;clear:both;margin:8px -9px -7px;border-top:1px solid var(--chat-linha)} /* taste-skill-ignore */
 .respostas span{text-align:center;padding:8px;color:var(--chat-link);font-weight:600} /* taste-skill-ignore */
 .respostas span+span{border-top:1px solid var(--chat-linha)} /* taste-skill-ignore */
-.anexo{display:flex;gap:9px;align-items:center;background:var(--chat-anexo);border-radius:6px;padding:8px;margin:0 -4px 6px}
-.anexo .pdf{width:28px;height:34px;border-radius:3px;background:var(--pdf);color:var(--sobre-marinho);font-size:.6rem;font-weight:700;display:grid;place-items:end center;padding-bottom:5px;flex:none}
+.anexo{display:flex;gap:8px;align-items:center;background:var(--chat-anexo);border-radius:6px;padding:8px;margin:0 -4px 6px}
+.anexo .pdf{width:28px;height:34px;border-radius:3px;background:var(--pdf);color:var(--sobre-marinho);font-size:.6rem;font-weight:700;display:grid;place-items:end center;padding-bottom:4px;flex:none}
 .anexo b{display:block;font-size:.8rem}
 .anexo small{font-size:.7rem;color:var(--chat-hora)}
 .recebido{display:block;color:var(--verde-texto)}
@@ -269,7 +269,7 @@ details p{margin:0;padding:0 24px 22px}
 .preco .mes{margin-left:8px;font-size:.95rem}
 .destaque .preco,.destaque .preco .mes{color:var(--preco-destaque)}
 .destaque .preco b,.destaque .preco .moeda,.destaque .preco .centavos{color:var(--sobre-marinho)}
-.vantagens{list-style:none;padding:20px 0 0;margin:0;display:grid;gap:11px;border-top:1px solid var(--borda)}
+.vantagens{list-style:none;padding:20px 0 0;margin:0;display:grid;gap:12px;border-top:1px solid var(--borda)}
 .destaque .vantagens{border-top-color:var(--marinho-linha)}
 .vantagens li{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;line-height:1.4}
 .vantagens li:first-child{font-weight:700}
@@ -472,7 +472,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 @media(max-width:600px){.mini-grafico .curva{stroke-width:2.2}.mini-grafico .mes{font-size:11px}.mini-grafico .valor{font-size:13px}}
 
 /* Venda de certificados: oferta própria, separada dos planos do sistema. */
-.topo nav{gap:18px}
+.topo nav{gap:16px}
 .garantias a{color:var(--verde-claro);font-weight:650}
 .certificados{margin-top:150px;padding-block:80px}
 .certificado-grade{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px 72px;align-items:start}
@@ -518,7 +518,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 .audio-resumo dl div{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid var(--borda)}
 .audio-resumo dt{color:var(--suave)}.audio-resumo dd{margin:0;text-align:right;font-weight:600}
 .audio-confirmar{padding:14px 20px;border-radius:999px;text-align:center;background:var(--verde);color:var(--sobre-marinho);font-weight:600}
-.audio-palco figcaption{margin-top:18px;color:var(--suave);font-size:.85rem;line-height:1.45}
+.audio-palco figcaption{margin-top:16px;color:var(--suave);font-size:.85rem;line-height:1.45}
 
 /* Refinamento geral (Claude, 04/11/2026, pedido do Rafael): mesma família de peças em toda a página. */
 /* Abertura: o cartão do exemplo entra junto com o texto; no celular vem depois dos botões, com respiro. */
@@ -650,7 +650,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura-texto>:nth-child(4){animation-
 .cert-cartao .preco{margin:18px 0 4px}
 .cert-cartao .preco b,.cert-cartao .preco .moeda,.cert-cartao .preco .centavos{color:var(--sobre-marinho)}
 .cert-cartao .preco .mes{color:var(--preco-destaque)}
-.cert-cartao .vantagens{flex:1;align-content:start;margin-top:18px;border-top-color:var(--marinho-linha);color:var(--sobre-marinho-texto)}
+.cert-cartao .vantagens{flex:1;align-content:start;margin-top:16px;border-top-color:var(--marinho-linha);color:var(--sobre-marinho-texto)}
 .cert-cartao .vantagens svg{stroke:var(--verde-claro)}
 .cert-de{margin:0;color:var(--preco-destaque);font-size:.9rem}
 .cert-de s{text-decoration-thickness:1.5px}
@@ -715,7 +715,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 @keyframes voz-surgir{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
 /* Passo 1: quatro jeitos de pedir, entrando em sequência quando o passo aparece. */
-.quadro.bolhas{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:7px;padding:16px}
+.quadro.bolhas{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:8px;padding:16px}
 .bolha{max-width:92%;display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:12px 12px 4px 12px;background:var(--balao-meu);color:var(--chat-texto);font-size:.88rem;line-height:1.3;box-shadow:0 1px .5px var(--chat-sombra);text-align:left}
 .bolha small{display:block;color:var(--chat-hora);font-size:.75rem}
 .bolha b{display:block;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -728,7 +728,7 @@ html:not(.sem-abertura):has(.abre-logo) .abertura :is(.audio-entendido,.audio-re
 .miniatura{flex:none;width:34px;height:34px;border-radius:6px;background:var(--verde-fundo);display:grid;place-items:center}
 .miniatura svg{width:26px;height:26px;fill:var(--papel);stroke:var(--verde);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .miniatura path{fill:none}
-.selo-pdf{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:6px;background:var(--pdf);color:var(--sobre-marinho);font-size:.68rem;font-weight:800;letter-spacing:.02em}
+.selo-pdf{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:6px;background:var(--pdf);color:var(--sobre-marinho);font-size:.68rem;font-weight:600;letter-spacing:.02em}
 .bolha.texto{padding:8px 12px}
 .js .palco[data-passo="1"] .bolha{animation:voz-surgir .4s var(--ease-out) both}
 .js .palco[data-passo="1"] .bolha:nth-child(2){animation-delay:.14s}
