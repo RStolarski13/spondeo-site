@@ -38,6 +38,27 @@
     // A decisão de outro handler de cancelar a navegação é respeitada.
     queueMicrotask(() => { if (!evento.defaultPrevented) aguardar(); });
   });
+  // Botão ocupado ao enviar (auditoria de estados, 19/11/2026): texto "Enviando…" ou
+  // "Gerando o arquivo…" e o segundo clique não reenvia. O disabled entra no setTimeout: se
+  // entrasse já no submit, o navegador tiraria o name/value do botão dos dados enviados.
+  const ocupados = new Map();  // botão -> nós originais (texto e ícone), devolvidos sem montar HTML
+  const ocupar = (form, botao, rotulo) => {
+    form.dataset.enviando = '';
+    if (!botao) return;
+    setTimeout(() => {
+      ocupados.set(botao, [...botao.childNodes]);
+      botao.textContent = rotulo;
+      botao.disabled = true;
+      botao.setAttribute('aria-busy', 'true');
+    }, 0);
+  };
+  const liberar = () => {
+    document.querySelectorAll('form[data-enviando]').forEach((f) => delete f.dataset.enviando);
+    ocupados.forEach((nos, b) => {
+      b.replaceChildren(...nos); b.disabled = false; b.removeAttribute('aria-busy');
+    });
+    ocupados.clear();
+  };
   document.addEventListener('submit', (evento) => {
     const form = evento.target;
     const botao = evento.submitter;
@@ -45,12 +66,33 @@
     const destino = new URL(botao?.getAttribute('formaction') || form.action, location.href);
     // Popup de confirmação ainda aberto (confirmar.js): só navega depois do "Sim".
     if (form.matches('[data-confirmar]:not([data-confirmado])')) return;
-    if (botao?.hasAttribute('data-download') || form.method === 'dialog' || (target && target !== '_self') ||
-        destino.origin !== location.origin || ARQUIVO.test(destino.pathname)) return;
-    queueMicrotask(() => { if (!evento.defaultPrevented) { texto.textContent = 'Aguarde…'; aguardar(); } });
+    if (form.method === 'dialog' || (target && target !== '_self')) return;
+    if (form.hasAttribute('data-enviando')) { evento.preventDefault(); return; }  // clique duplo
+    // Sem internet: fica na tela, com o que foi digitado, e o aviso de erro padrão (aviso.js).
+    if (!navigator.onLine) {
+      evento.preventDefault();
+      document.dispatchEvent(new CustomEvent('spondeo:aviso', {
+        detail: { texto: 'Sem internet. Confira a conexão e tente de novo.', tipo: 'erro' },
+      }));
+      return;
+    }
+    if (botao?.hasAttribute('data-download') || ARQUIVO.test(destino.pathname)) {
+      queueMicrotask(() => {
+        if (evento.defaultPrevented) return;
+        ocupar(form, botao, 'Gerando o arquivo…');
+        setTimeout(liberar, 10000);  // o download não troca de página
+      });
+      return;
+    }
+    if (destino.origin !== location.origin) return;
+    queueMicrotask(() => {
+      if (!evento.defaultPrevented) { texto.textContent = 'Aguarde…'; aguardar(); ocupar(form, botao, 'Enviando…'); }
+    });
   });
+  window.addEventListener('pageshow', liberar);
   window.addEventListener('pageshow', limpar);
   window.addEventListener('pagehide', limpar);
   // Downloads retornam o foco à página sem uma nova navegação.
   window.addEventListener('focus', limpar);
+  window.addEventListener('focus', () => setTimeout(liberar, 1500));  // volta de um download
 })();

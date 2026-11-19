@@ -437,7 +437,7 @@ h2{font-weight:700}
 
 
 /* Logo desenhado na abertura: os anéis se traçam, a lente acende, o nome entra e a tela abre.
-   abertura.js põe .sem-abertura no html a partir da 2ª página vista na sessão. */
+   o script inline do index.html põe .sem-abertura no html a partir da 2ª página vista na sessão. */
 .abre-logo{position:fixed;inset:0;z-index:30;display:grid;place-items:center;background:var(--tinta);pointer-events:none;
   animation:abre-sai .6s var(--ease-in-out) 2s forwards}
 .abre-logo svg{width:min(300px,68vw);height:auto;overflow:visible;animation:abre-logo-sai .6s var(--ease-in-out) 2s forwards}
